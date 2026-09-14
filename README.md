@@ -2,7 +2,7 @@
 
 **Evaluación Parcial N°1 — Diseño de Solución con LLM y RAG | Ingeniería de Soluciones con IA (ISY0101), Duoc UC**
 
-Chatbot inteligente que responde consultas de pasajeros sobre **cambios de vuelo, equipaje y Millas LATAM Pass**, combinando el contexto de su reserva (fuente interna simulada) con el contenido oficial del Centro de Ayuda de LATAM (fuente externa real), utilizando el stack del curso: **LangChain + Groq (LLaMA 3.3 70B) + Gemini (text-embedding-004) + FAISS**.
+Chatbot inteligente que responde consultas de pasajeros sobre **cambios de vuelo, equipaje y Millas LATAM Pass**, combinando el contexto de su reserva (fuente interna simulada) con el contenido oficial del Centro de Ayuda de LATAM (fuente externa real), utilizando el stack del curso: **LangChain + Groq (`openai/gpt-oss-120b`) + Gemini (`models/gemini-embedding-001`) + FAISS**.
 
 [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sebastiangome/latam-agente/blob/main/LATAM_RAG_Agent.ipynb)
 
@@ -18,12 +18,13 @@ Chatbot inteligente que responde consultas de pasajeros sobre **cambios de vuelo
 ## Estructura del Repositorio
 
 ```text
-latam-agente-rag-isy0101/
+latam-agente/
 ├── data/
 │   └── reservas_latam.csv           # Dataset sintético de perfiles de reserva (200 filas)
 ├── images/
 │   └── diagrama_arquitectura.png    # Diagrama de arquitectura del pipeline RAG (IE4/IE7)
 ├── .env.example                     # Plantilla de variables de entorno requeridas
+├── .gitignore                       # Configuración para ignorar credenciales (.env)
 ├── LATAM_RAG_Agent.ipynb            # Notebook interactivo (Google Colab / Local)
 ├── README.md                        # Guía de ejecución, arquitectura y documentación
 └── requirements.txt                 # Dependencias de Python para ejecución local
@@ -37,9 +38,9 @@ El sistema opera bajo un pipeline desacoplado en 4 capas:
 1. **Capa de Interacción:** Recepción de consultas en lenguaje natural con o sin código de reserva (PNR de 6 caracteres).
 2. **Capa de Recuperación Dual:**
    - *Fuente Interna (Reservas):* Extracción exacta y determinística por código PNR (resguardo estricto de privacidad del pasajero).
-   - *Fuente Externa (Centro de Ayuda):* Búsqueda semántica sobre políticas indexadas en **FAISS** con embeddings de **Google Gemini (`text-embedding-004`)** recuperando los $k=2$ artículos más pertinentes junto a su URL oficial.
+   - *Fuente Externa (Centro de Ayuda):* Búsqueda semántica sobre políticas indexadas en **FAISS** con embeddings de **Google Gemini (`models/gemini-embedding-001`)** recuperando los $k=2$ artículos más pertinentes junto a su URL oficial.
 3. **Capa de Procesamiento & Contexto:** Ensamble del prompt dinámico combinando directivas estrictas (`SYSTEM_PROMPT`), datos de la reserva y fragmentos normativos etiquetados con su enlace oficial.
-4. **Capa de Generación:** Inferencia de alta velocidad en **Groq** utilizando el modelo `llama-3.3-70b-versatile` con temperatura baja ($T=0.2$).
+4. **Capa de Generación:** Inferencia de alta velocidad en **Groq** utilizando el modelo `openai/gpt-oss-120b` (con fallback a `openai/gpt-oss-20b` y `qwen/qwen3.6-27b`) con temperatura baja ($T=0.2$).
 
 ![Diagrama de Arquitectura](images/diagrama_arquitectura.png)
 
