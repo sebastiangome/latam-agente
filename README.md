@@ -1,115 +1,117 @@
-# Agente de Cuenta LATAM Airlines — Pipeline RAG (ISY0101, EP1)
+# Agente de Cuenta LATAM Airlines — Evaluación 2: Agente Funcional (ISY0101, EP2)
 
-**Evaluación Parcial N°1 — Diseño de Solución con LLM y RAG | Ingeniería de Soluciones con IA (ISY0101), Duoc UC**
+**Evaluación Parcial N°2 — Desarrollo de un Agente Funcional | Ingeniería de Soluciones con IA (ISY0101), Duoc UC**
 
-Chatbot inteligente que responde consultas de pasajeros sobre **cambios de vuelo, equipaje y Millas LATAM Pass**, combinando el contexto de su reserva (fuente interna simulada) con el contenido oficial del Centro de Ayuda de LATAM (fuente externa real), utilizando el stack del curso: **LangChain + Groq (`openai/gpt-oss-120b`) + Gemini (`models/gemini-embedding-001`) + FAISS**.
+**Integrantes:** Sebastián Gomez · Rafael Pacheco
 
-[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sebastiangome/latam-agente/blob/main/LATAM_RAG_Agent.ipynb)
+[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sebastiangome/latam-agente/blob/main/EP2_Agente_LATAM.ipynb)
 
----
-
-## Integrantes
-
-- Sebastián Gomez
-- Rafael Pacheco
+Continuación del EP1 ([`LATAM_RAG_Agent.ipynb`](LATAM_RAG_Agent.ipynb)). El chatbot RAG que respondía consultas de pasajeros sobre **cambios de vuelo, equipaje y Millas LATAM Pass** pasa a ser un **agente** que consulta, razona, escribe, recuerda y planifica la atención de post-venta.
 
 ---
 
-## Estructura del Repositorio
+## 1. Requerimiento organizacional
+
+LATAM recibe muchas consultas de post-venta repetitivas que combinan **datos de la reserva** con la **normativa vigente**. El agente automatiza el flujo de un ejecutivo de primera línea:
+
+| Paso del ejecutivo | Cómo lo hace el agente |
+|---|---|
+| Identificar al pasajero | `consultar_reserva` (búsqueda exacta por código, como en el EP1) |
+| Revisar atenciones y casos previos | `recordar_historial` (memoria de largo plazo) |
+| Buscar la política aplicable | `buscar_politicas` (FAISS + Gemini, filtrado por tema) |
+| Aplicar la regla y decidir | `evaluar_vuelo_adelantado` + planificador |
+| Derivar lo que no puede resolver | `registrar_caso` para un ejecutivo humano |
+
+Se mantienen las restricciones del EP1: datos de pasajeros **simulados**, el agente **no ejecuta transacciones** y toda respuesta **cita la fuente oficial**.
+
+## 2. Arquitectura y orquestación
+
+![Orquestación](images/diagrama_orquestacion_ep2.png)
+
+- **Framework:** LangChain v1 `create_agent`, que corre sobre LangGraph (bucle modelo → herramienta → modelo).
+- **LLM:** Groq `openai/gpt-oss-120b`, con `gpt-oss-20b` y `qwen3.6-27b` de respaldo (en el EP1 Groq dio de baja `llama-3.3-70b`).
+- **Middleware `prompt_con_plan`:** antes de cada llamada al modelo ejecuta `planificar()` y agrega el plan al `SYSTEM_PROMPT` del EP1.
+- **Datos del EP1:** `data/reservas_latam.csv` (200 reservas) y los 5 resúmenes de políticas con su URL.
+
+## 3. Herramientas
+
+| Tipo | Herramienta | Qué hace |
+|---|---|---|
+| Consulta | `consultar_reserva` | Busca el código exacto en el CSV |
+| Consulta | `buscar_politicas` | RAG sobre las 5 políticas, filtrando por tema (cambios, equipaje, millas) |
+| Consulta | `recordar_historial` | Atenciones anteriores parecidas y casos abiertos del pasajero |
+| Razonamiento | `evaluar_vuelo_adelantado` | Regla oficial: ≥ 16 min y ≤ 12 meses → cambio sin costo o devolución |
+| Escritura | `registrar_caso` | Crea un caso con ID y prioridad en SQLite |
+
+La regla de vuelo adelantado está en código porque en el EP1 el LLM respondió "2 piezas de hasta 32 kg", cifras que no estaban en la política recuperada.
+
+## 4. Memoria
+
+| Tipo | Implementación |
+|---|---|
+| Corto plazo | `InMemorySaver` de LangGraph: guarda el historial de cada `sesion` (thread_id). Por eso entiende "es ACF657" como respuesta a la pregunta anterior |
+| Largo plazo | SQLite `memoria_latam.db`: tabla `atenciones` (resumen + vector) y tabla `casos` |
+| Recuperación semántica | Filtra por código de reserva y ordena las atenciones por similitud coseno con la consulta. Nunca mezcla la historia de dos pasajeros |
+
+## 5. Planificación y toma de decisiones
+
+![Planificación](images/diagrama_planificacion_ep2.png)
+
+`planificar()` detecta los temas, los ordena por prioridad (**alta:** vuelo adelantado, transacciones · **media:** cambios, equipaje · **baja:** millas) y arma los pasos. Se vuelve a calcular con los resultados de cada herramienta, así el agente **replanifica** cuando cambian las condiciones:
+
+| Condición | Comportamiento |
+|---|---|
+| Falta el código de reserva | Responde la política general y pide el código |
+| La reserva no existe | No entrega datos personales; pide revisar el código |
+| Adelanto de 10 min | Informa que no aplica; no abre caso |
+| Adelanto de 40 min | Agrega `registrar_caso` con prioridad alta |
+| Tema sin política (ej. mascotas) | No inventa; registra caso fuera de cobertura |
+| Caso abierto en una conversación nueva | Informa su estado y no lo duplica |
+
+## 6. Ejecución
+
+**Google Colab (recomendado):** abrir el notebook con el badge, crear los Secrets `LLM_API_KEY` ([Groq](https://console.groq.com/keys)) y `GOOGLE_API_KEY` ([Gemini](https://aistudio.google.com/apikey)) con *Notebook access* activado, y `Entorno de ejecución → Ejecutar todas`.
+
+**Local:**
+```bash
+python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+cp .env.example .env                                # completar las dos claves
+jupyter notebook EP2_Agente_LATAM.ipynb
+```
+
+El Módulo 5 incluye 10 pruebas (`assert`) del planificador y las herramientas que no usan el LLM. El Módulo 7 ejecuta los 6 escenarios de la demo.
+
+## 7. Estructura
 
 ```text
 latam-agente/
-├── data/
-│   └── reservas_latam.csv           # Dataset sintético de perfiles de reserva (200 filas)
-├── images/
-│   └── diagrama_arquitectura.png    # Diagrama de arquitectura del pipeline RAG (IE4/IE7)
-├── .env.example                     # Plantilla de variables de entorno requeridas
-├── .gitignore                       # Configuración para ignorar credenciales (.env)
-├── LATAM_RAG_Agent.ipynb            # Notebook interactivo (Google Colab / Local)
-├── README.md                        # Guía de ejecución, arquitectura y documentación
-└── requirements.txt                 # Dependencias de Python para ejecución local
+├── data/reservas_latam.csv          # 200 reservas simuladas (EP1)
+├── images/                          # diagramas EP1 y EP2 (.png y fuente .mmd)
+├── LATAM_RAG_Agent.ipynb            # EP1: pipeline RAG
+├── EP2_Agente_LATAM.ipynb           # EP2: agente funcional
+├── requirements.txt · .env.example · .gitignore
+└── README.md
 ```
 
----
+## Referencias
 
-## Arquitectura de la Solución
+LangChain. (s.f.). *Agents* (LangChain v1 documentation). https://docs.langchain.com/oss/python/langchain/agents
 
-El sistema opera bajo un pipeline desacoplado en 4 capas:
-1. **Capa de Interacción:** Recepción de consultas en lenguaje natural con o sin código de reserva (PNR de 6 caracteres).
-2. **Capa de Recuperación Dual:**
-   - *Fuente Interna (Reservas):* Extracción exacta y determinística por código PNR (resguardo estricto de privacidad del pasajero).
-   - *Fuente Externa (Centro de Ayuda):* Búsqueda semántica sobre políticas indexadas en **FAISS** con embeddings de **Google Gemini (`models/gemini-embedding-001`)** recuperando los $k=2$ artículos más pertinentes junto a su URL oficial.
-3. **Capa de Procesamiento & Contexto:** Ensamble del prompt dinámico combinando directivas estrictas (`SYSTEM_PROMPT`), datos de la reserva y fragmentos normativos etiquetados con su enlace oficial.
-4. **Capa de Generación:** Inferencia de alta velocidad en **Groq** utilizando el modelo `openai/gpt-oss-120b` (con fallback a `openai/gpt-oss-20b` y `qwen/qwen3.6-27b`) con temperatura baja ($T=0.2$).
+LangChain. (s.f.). *LangGraph: Persistence*. https://docs.langchain.com/oss/python/langgraph/persistence
 
-![Diagrama de Arquitectura](images/diagrama_arquitectura.png)
+Groq. (s.f.). *GroqCloud: Supported models*. https://console.groq.com/docs/models
 
----
+Google AI for Developers. (s.f.). *Gemini API: Embeddings*. https://ai.google.dev/gemini-api/docs/embeddings
 
-## Instrucciones de Ejecución
+Douze, M., Guzhva, A., Deng, C., Johnson, J., Szilvasy, G., Mazaré, P.-E., Lomeli, M., Hosseini, L., & Jégou, H. (2024). *The Faiss library*. arXiv. https://arxiv.org/abs/2401.08281
 
-### Opción 1: Google Colab (Recomendado — Sin instalación local)
+Yao, S., Zhao, J., Yu, D., Du, N., Shafran, I., Narasimhan, K., & Cao, Y. (2023). ReAct: Synergizing reasoning and acting in language models. En *International Conference on Learning Representations (ICLR 2023)*. https://arxiv.org/abs/2210.03629
 
-1. Abre el notebook haciendo clic en el badge superior: [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sebastiangome/latam-agente/blob/main/LATAM_RAG_Agent.ipynb)
-2. Obtén tus API keys gratuitas:
-   - **`LLM_API_KEY` (Groq):** Regístrate en [console.groq.com/keys](https://console.groq.com/keys).
-   - **`GOOGLE_API_KEY` (Gemini):** Regístrate en [aistudio.google.com/apikey](https://aistudio.google.com/apikey).
-3. En Google Colab, abre el panel lateral izquierdo **Secrets** → **Add new secret**:
-   - Crea `LLM_API_KEY` con tu clave de Groq y activa el interruptor **"Notebook access"**.
-   - Crea `GOOGLE_API_KEY` con tu clave de Gemini y activa el interruptor **"Notebook access"**.
-4. Ve al menú superior: `Entorno de ejecución` → `Ejecutar todas`.
+LATAM Airlines. (s.f.). *Centro de Ayuda LATAM* (cambios, vuelo adelantado, equipaje, Millas LATAM Pass). https://www.latamairlines.com/cl/es/centro-ayuda
 
----
-
-### Opción 2: Ejecución Local
-
-1. Abre la carpeta del proyecto en tu equipo.
-
-2. Crea y activa un entorno virtual de Python:
-   - **En Windows (PowerShell / CMD):**
-```powershell
-     py -m venv .venv
-     .venv\Scripts\activate
-```
-   - **En macOS / Linux:**
-```bash
-     python3 -m venv .venv
-     source .venv/bin/activate
-```
-
-3. Instala las dependencias:
-```bash
-   pip install -r requirements.txt
-```
-
-4. Configura tus variables de entorno:
-```bash
-   cp .env.example .env
-```
-   Abre `.env` en tu editor y define tus claves:
-```env
-   LLM_API_KEY=gsk_tu_clave_de_groq_aqui
-   GOOGLE_API_KEY=AIzaSy_tu_clave_de_gemini_aqui
-```
-
-5. Inicia el servidor de Jupyter:
-```bash
-   jupyter notebook LATAM_RAG_Agent.ipynb
-```
-
----
-
-## Fuentes de Datos
-
-- **Interna (Simulada):** Perfiles de reserva de pasajeros (`data/reservas_latam.csv`) con parámetros de tarifa (`Light`, `Plus`, `Top`, `Full`), cabina (`Economy`, `Premium Economy`, `Premium Business`), categoría LATAM Pass y saldo de millas.
-- **Externa (Real):** Resúmenes normativos autorizados extraídos de artículos públicos del Centro de Ayuda de LATAM Airlines sobre cambios voluntarios, reprogramaciones por adelanto de vuelo, franquicia de equipaje y reglamento de Millas LATAM Pass (citas y fuentes oficiales del Centro de Ayuda de LATAM).
-
----
+LATAM Pass. (2025). *Reglamento LATAM Pass 2025: Acumulación y canje*. https://latampass.latam.com/es_cl/reglamento-2025/acumulacion-y-canje
 
 ## Declaración de Uso Ético de IA
 
 Este proyecto utilizó modelos de IA generativa (Claude 3.5 Sonnet / Antigravity AI) de manera ética como herramienta de apoyo para la redacción técnica, optimización de código y estructuración de diagramas, de acuerdo con las normativas de Duoc UC ([bibliotecas.duoc.cl/ia](https://bibliotecas.duoc.cl/ia)). La formulación del caso, arquitectura, justificaciones y reflexiones personales fueron realizadas íntegramente por los integrantes del equipo.
-
----
-
-**Ingeniería de Soluciones con IA (ISY0101) — Duoc UC, 2026.**
