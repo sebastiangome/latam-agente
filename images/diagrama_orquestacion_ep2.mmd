@@ -1,0 +1,23 @@
+flowchart LR
+    P([Pasajero]) -->|consulta| A["atender(consulta, sesion)"]
+    A --> AG
+    subgraph AG["Agente · create_agent (LangChain v1 / LangGraph)"]
+        direction TB
+        MW["Middleware prompt_con_plan<br/>planificar() antes de cada<br/>llamada al modelo"] --> LLM{"LLM Groq<br/>gpt-oss-120b"}
+        LLM -->|llama herramienta| T["Herramientas"]
+        T -->|resultado| MW
+    end
+    subgraph H["5 herramientas"]
+        direction TB
+        H1["Consulta<br/>consultar_reserva<br/>buscar_politicas<br/>recordar_historial"]
+        H2["Razonamiento<br/>evaluar_vuelo_adelantado"]
+        H3["Escritura<br/>registrar_caso"]
+    end
+    T --- H
+    H1 --> CSV[("reservas_latam.csv<br/>búsqueda exacta")]
+    H1 --> F[("FAISS + Gemini<br/>5 políticas con URL")]
+    H1 --> DB[("SQLite memoria largo plazo<br/>atenciones + casos")]
+    H3 --> DB
+    AG -.historial por sesión.-> CK[("Checkpointer<br/>memoria corto plazo")]
+    A -->|guarda atención| DB
+    LLM -->|respuesta con fuente| P
