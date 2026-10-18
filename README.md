@@ -43,6 +43,8 @@ Se mantienen las restricciones del EP1: datos de pasajeros **simulados**, el age
 | Razonamiento | `evaluar_vuelo_adelantado` | Regla oficial: ≥ 16 min y ≤ 12 meses → cambio sin costo o devolución |
 | Escritura | `registrar_caso` | Crea un caso con ID y prioridad en SQLite |
 
+También se registra el alias `evalua_vuelo_adelantado`, porque en las pruebas con Groq el modelo llamó la herramienta con ese nombre y Groq rechaza los nombres que no existen.
+
 La regla de vuelo adelantado está en código porque en el EP1 el LLM respondió "2 piezas de hasta 32 kg", cifras que no estaban en la política recuperada.
 
 ## 4. Memoria
