@@ -1,4 +1,4 @@
-# Agente de Cuenta LATAM Airlines — Evaluación 2: Agente Funcional (ISY0101, EP2)
+# Agente de Cuenta LATAM Airlines (ISY0101) — EP2 Agente Funcional · EP3 Observabilidad
 
 **Evaluación Parcial N°2 — Desarrollo de un Agente Funcional | Ingeniería de Soluciones con IA (ISY0101), Duoc UC**
 
@@ -10,23 +10,34 @@ Continuación del EP1 ([`LATAM_RAG_Agent.ipynb`](LATAM_RAG_Agent.ipynb)). El cha
 
 ## EP3 — Observabilidad
 
-**Evaluación Parcial N°3 — Implementación de Observabilidad.** El agente del EP2 se instrumenta sin modificarlo (EP3_Observabilidad_LATAM.ipynb, módulos 1 a 6 iguales al EP2) y se monitorea con un dashboard en Streamlit (dashboard/app.py).
+[![Abrir EP3 en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sebastiangome/latam-agente/blob/main/EP3_Observabilidad_LATAM.ipynb)
+
+**Evaluación Parcial N°3 — Implementación de Observabilidad.** El agente del EP2 se instrumenta sin modificarlo (`EP3_Observabilidad_LATAM.ipynb`, módulos 1 a 6 iguales al EP2) y se monitorea con un dashboard en Streamlit (`dashboard/app.py`).
 
 | Módulo | Qué hace |
 |---|---|
-| 7 · Instrumentación | Observador (callback de LangChain) mide cada llamada al LLM y a cada herramienta; un logging.Handler sobre httpx cuenta los requests a Groq/Gemini y los **429**; tender_observado() registra el turno completo |
-| 8 · Batería de pruebas | 10 casos con variabilidad de datos (texto sin tildes, caso borde de 16 min, código inexistente, fuera de cobertura, multi-intención, sin código, memoria de largo plazo) × REPETICIONES; reanudable |
+| 7 · Instrumentación | `Observador` (callback de LangChain) mide cada llamada al LLM y a cada herramienta; un `logging.Handler` sobre `httpx` cuenta los requests a Groq/Gemini y los **429**; `atender_observado()` registra el turno completo |
+| 8 · Batería de pruebas | 10 casos con variabilidad de datos (texto sin tildes, caso borde de 16 min, código inexistente, fuera de cobertura, multi-intención, sin código, memoria de largo plazo) × `REPETICIONES`; reanudable |
 | 9 · Métricas | precisión del plan y de la decisión, consistencia, frecuencia de errores, latencia p50/p95, tokens, llamadas al LLM, RAM |
-| 10 · Exportar | descarga logs.zip desde Colab |
+| 10 · Exportar | descarga `logs.zip` desde Colab |
 
-**Logs** (carpeta logs/):
+**Logs** (carpeta `logs/`):
 
 | Archivo | Una línea por | Campos principales |
 |---|---|---|
-| 	urnos.jsonl | consulta | caso, variante, rep, herramientas, temas, ok_plan, ok_decision, motivos, latencia_s, tokens_in/out, rss_mb, db_kb, error |
-| eventos.jsonl | llamada al LLM, herramienta o request HTTP | turno_id, tipo, nombre, latencia_s, tokens, decision, estado (HTTP), alias, error |
-| gente.log | evento, en texto | nivel INFO / WARNING (429, alias) / ERROR |
+| `turnos.jsonl` | consulta | caso, variante, rep, herramientas, temas, ok_plan, ok_decision, motivos, latencia_s, tokens_in/out, rss_mb, db_kb, error |
+| `eventos.jsonl` | llamada al LLM, herramienta o request HTTP | turno_id, tipo, nombre, latencia_s, tokens, decision, estado (HTTP), alias, error |
+| `agente.log` | evento, en texto | nivel INFO / WARNING (429, alias) / ERROR |
 
+**Cómo ejecutar**
+1. Abrir el notebook EP3 en Colab con los Secrets `LLM_API_KEY` y `GOOGLE_API_KEY` y `Ejecutar todas`. Con el plan gratuito de Groq (8.000 tokens/min en `gpt-oss-120b`) la batería tarda varios minutos; los 429 se reintentan solos y quedan registrados. Si se corta, volver a ejecutar la celda de la batería: salta los turnos ya hechos.
+2. Descargar `logs.zip` (Módulo 10), descomprimirlo en `logs/` del repositorio y subirlo a GitHub.
+3. Dashboard (local):
+```bash
+pip install -r requirements.txt
+streamlit run dashboard/app.py
+```
+Pestañas: **Calidad** (precisión y consistencia por caso, turnos fallidos con su motivo, herramientas por caso) · **Latencia** (por turno, reparto LLM / herramientas / espera, por herramienta) · **Recursos** (tokens, llamadas al LLM, RAM, mensajes en la ventana de contexto) · **Errores y logs** (excepciones, alias, HTTP por código, `agente.log` filtrable por nivel).
 
 ---
 
@@ -112,6 +123,9 @@ latam-agente/
 ├── images/                          # diagramas EP1 y EP2 (.png y fuente .mmd)
 ├── LATAM_RAG_Agent.ipynb            # EP1: pipeline RAG
 ├── EP2_Agente_LATAM.ipynb           # EP2: agente funcional
+├── EP3_Observabilidad_LATAM.ipynb   # EP3: instrumentación, batería de pruebas y métricas
+├── dashboard/app.py                 # EP3: dashboard Streamlit
+├── logs/                            # EP3: logs de la ejecución real (desde Colab)
 ├── requirements.txt · .env.example · .gitignore
 └── README.md
 ```
