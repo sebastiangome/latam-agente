@@ -8,6 +8,26 @@
 
 Continuación del EP1 ([`LATAM_RAG_Agent.ipynb`](LATAM_RAG_Agent.ipynb)). El chatbot RAG que respondía consultas de pasajeros sobre **cambios de vuelo, equipaje y Millas LATAM Pass** pasa a ser un **agente** que consulta, razona, escribe, recuerda y planifica la atención de post-venta.
 
+## EP3 — Observabilidad
+
+**Evaluación Parcial N°3 — Implementación de Observabilidad.** El agente del EP2 se instrumenta sin modificarlo (EP3_Observabilidad_LATAM.ipynb, módulos 1 a 6 iguales al EP2) y se monitorea con un dashboard en Streamlit (dashboard/app.py).
+
+| Módulo | Qué hace |
+|---|---|
+| 7 · Instrumentación | Observador (callback de LangChain) mide cada llamada al LLM y a cada herramienta; un logging.Handler sobre httpx cuenta los requests a Groq/Gemini y los **429**; tender_observado() registra el turno completo |
+| 8 · Batería de pruebas | 10 casos con variabilidad de datos (texto sin tildes, caso borde de 16 min, código inexistente, fuera de cobertura, multi-intención, sin código, memoria de largo plazo) × REPETICIONES; reanudable |
+| 9 · Métricas | precisión del plan y de la decisión, consistencia, frecuencia de errores, latencia p50/p95, tokens, llamadas al LLM, RAM |
+| 10 · Exportar | descarga logs.zip desde Colab |
+
+**Logs** (carpeta logs/):
+
+| Archivo | Una línea por | Campos principales |
+|---|---|---|
+| 	urnos.jsonl | consulta | caso, variante, rep, herramientas, temas, ok_plan, ok_decision, motivos, latencia_s, tokens_in/out, rss_mb, db_kb, error |
+| eventos.jsonl | llamada al LLM, herramienta o request HTTP | turno_id, tipo, nombre, latencia_s, tokens, decision, estado (HTTP), alias, error |
+| gente.log | evento, en texto | nivel INFO / WARNING (429, alias) / ERROR |
+
+
 ---
 
 ## 1. Requerimiento organizacional
