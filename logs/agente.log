@@ -1,0 +1,329 @@
+2026-11-21 02:58:10,406 INFO turno=C01-r1-d9f0e2 INICIO caso=C01 rep=1 consulta='Tengo la reserva RAG276, ¿cuánto equipaje puedo llevar?'
+2026-11-21 02:58:10,941 INFO turno=C01-r1-d9f0e2 LLM 0.52s in=797 out=73 -> consultar_reserva
+2026-11-21 02:58:10,948 INFO turno=C01-r1-d9f0e2 TOOL consultar_reserva 0.001s
+2026-11-21 02:58:11,344 INFO turno=C01-r1-d9f0e2 LLM 0.39s in=891 out=69 -> buscar_politicas
+2026-11-21 02:58:11,612 INFO turno=C01-r1-d9f0e2 TOOL buscar_politicas 0.258s
+2026-11-21 02:58:13,144 INFO turno=C01-r1-d9f0e2 LLM 1.52s in=1087 out=615 -> respuesta_final
+2026-11-21 02:58:13,345 INFO turno=C01-r1-d9f0e2 FIN 2.938s herramientas=['consultar_reserva', 'buscar_politicas'] error=None
+2026-11-21 02:58:15,362 INFO turno=C02-r1-5cd279 INICIO caso=C02 rep=1 consulta='hola mi reserva es rag276 cuanto equipaje llevo'
+2026-11-21 02:58:15,774 INFO turno=C02-r1-5cd279 LLM 0.39s in=792 out=85 -> consultar_reserva
+2026-11-21 02:58:15,778 INFO turno=C02-r1-5cd279 TOOL consultar_reserva 0.001s
+2026-11-21 02:58:16,364 INFO turno=C02-r1-5cd279 LLM 0.58s in=886 out=96 -> buscar_politicas
+2026-11-21 02:58:16,585 INFO turno=C02-r1-5cd279 TOOL buscar_politicas 0.206s
+2026-11-21 02:58:18,543 INFO turno=C02-r1-5cd279 LLM 1.95s in=1084 out=746 -> respuesta_final
+2026-11-21 02:58:18,807 INFO turno=C02-r1-5cd279 FIN 3.444s herramientas=['consultar_reserva', 'buscar_politicas'] error=None
+2026-11-21 02:58:20,823 INFO turno=C03-r1-1c8e9f INICIO caso=C03 rep=1 consulta='Reserva QVA863: me adelantaron el vuelo 10 minutos, ¿lo puedo cambiar gratis?'
+2026-11-21 02:58:21,273 INFO turno=C03-r1-1c8e9f LLM 0.43s in=824 out=97 -> consultar_reserva
+2026-11-21 02:58:21,289 INFO turno=C03-r1-1c8e9f TOOL consultar_reserva 0.001s
+2026-11-21 02:58:22,069 INFO turno=C03-r1-1c8e9f LLM 0.77s in=918 out=88 -> recordar_historial
+2026-11-21 02:58:22,073 INFO turno=C03-r1-1c8e9f TOOL recordar_historial 0.001s
+2026-11-21 02:58:22,156 WARNING turno=C03-r1-1c8e9f HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 02:58:30,935 INFO turno=C03-r1-1c8e9f LLM 8.86s in=987 out=98 -> buscar_politicas
+2026-11-21 02:58:31,270 INFO turno=C03-r1-1c8e9f TOOL buscar_politicas 0.321s
+2026-11-21 02:58:31,388 WARNING turno=C03-r1-1c8e9f HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 02:58:41,942 INFO turno=C03-r1-1c8e9f LLM 10.67s in=1290 out=58 -> evalua_vuelo_adelantado
+2026-11-21 02:58:41,946 INFO turno=C03-r1-1c8e9f TOOL evaluar_vuelo_adelantado 0.000s
+2026-11-21 02:58:41,946 WARNING turno=C03-r1-1c8e9f TOOL evalua_vuelo_adelantado 0.001s (alias: el modelo escribió mal el nombre)
+2026-11-21 02:58:42,027 WARNING turno=C03-r1-1c8e9f HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 02:58:53,108 INFO turno=C03-r1-1c8e9f LLM 11.16s in=1406 out=326 -> respuesta_final
+2026-11-21 02:58:53,389 INFO turno=C03-r1-1c8e9f FIN 32.565s herramientas=['consultar_reserva', 'recordar_historial', 'buscar_politicas', 'evaluar_vuelo_adelantado'] error=None
+2026-11-21 02:58:55,397 INFO turno=C04-r1-4fe3ef INICIO caso=C04 rep=1 consulta='Reserva QVA863: LATAM adelantó mi vuelo 16 minutos, ¿qué puedo hacer?'
+2026-11-21 02:58:55,464 WARNING turno=C04-r1-4fe3ef HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 02:58:58,053 INFO turno=C04-r1-4fe3ef LLM 2.65s in=824 out=128 -> consultar_reserva
+2026-11-21 02:58:58,062 INFO turno=C04-r1-4fe3ef TOOL consultar_reserva 0.001s
+2026-11-21 02:58:58,153 WARNING turno=C04-r1-4fe3ef HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 02:59:05,262 WARNING turno=C04-r1-4fe3ef HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 02:59:08,724 INFO turno=C04-r1-4fe3ef LLM 10.66s in=918 out=93 -> recordar_historial
+2026-11-21 02:59:08,727 INFO turno=C04-r1-4fe3ef TOOL recordar_historial 0.001s
+2026-11-21 02:59:08,808 WARNING turno=C04-r1-4fe3ef HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 02:59:16,239 INFO turno=C04-r1-4fe3ef LLM 7.51s in=987 out=98 -> buscar_politicas
+2026-11-21 02:59:16,492 INFO turno=C04-r1-4fe3ef TOOL buscar_politicas 0.250s
+2026-11-21 02:59:16,557 WARNING turno=C04-r1-4fe3ef HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 02:59:22,953 INFO turno=C04-r1-4fe3ef LLM 6.46s in=1290 out=67 -> evalua_vuelo_adelantado
+2026-11-21 02:59:22,957 INFO turno=C04-r1-4fe3ef TOOL evaluar_vuelo_adelantado 0.001s
+2026-11-21 02:59:22,957 WARNING turno=C04-r1-4fe3ef TOOL evalua_vuelo_adelantado 0.002s (alias: el modelo escribió mal el nombre)
+2026-11-21 02:59:23,033 WARNING turno=C04-r1-4fe3ef HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 02:59:34,769 INFO turno=C04-r1-4fe3ef LLM 11.81s in=1439 out=146 -> registrar_caso
+2026-11-21 02:59:34,782 INFO turno=C04-r1-4fe3ef TOOL registrar_caso 0.009s
+2026-11-21 02:59:34,868 WARNING turno=C04-r1-4fe3ef HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 02:59:43,976 WARNING turno=C04-r1-4fe3ef HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 02:59:50,414 INFO turno=C04-r1-4fe3ef LLM 15.63s in=1536 out=429 -> respuesta_final
+2026-11-21 02:59:50,684 INFO turno=C04-r1-4fe3ef FIN 55.287s herramientas=['consultar_reserva', 'recordar_historial', 'buscar_politicas', 'evaluar_vuelo_adelantado', 'registrar_caso'] error=None
+2026-11-21 02:59:52,693 INFO turno=C05-r1-2ee390 INICIO caso=C05 rep=1 consulta='Reserva CKJ320: LATAM adelantó 40 minutos el vuelo de mañana, ¿lo puedo cambiar gratis?'
+2026-11-21 02:59:52,810 WARNING turno=C05-r1-2ee390 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 02:59:57,255 INFO turno=C05-r1-2ee390 LLM 4.56s in=827 out=95 -> consultar_reserva
+2026-11-21 02:59:57,257 INFO turno=C05-r1-2ee390 TOOL consultar_reserva 0.001s
+2026-11-21 02:59:57,366 WARNING turno=C05-r1-2ee390 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:00:02,879 INFO turno=C05-r1-2ee390 LLM 5.62s in=920 out=93 -> recordar_historial
+2026-11-21 03:00:02,882 INFO turno=C05-r1-2ee390 TOOL recordar_historial 0.001s
+2026-11-21 03:00:02,961 WARNING turno=C05-r1-2ee390 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:00:07,038 WARNING turno=C05-r1-2ee390 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:00:11,452 INFO turno=C05-r1-2ee390 LLM 8.57s in=992 out=101 -> buscar_politicas
+2026-11-21 03:00:11,726 INFO turno=C05-r1-2ee390 TOOL buscar_politicas 0.271s
+2026-11-21 03:00:11,807 WARNING turno=C05-r1-2ee390 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:00:16,685 INFO turno=C05-r1-2ee390 LLM 4.96s in=1298 out=58 -> evalua_vuelo_adelantado
+2026-11-21 03:00:16,689 INFO turno=C05-r1-2ee390 TOOL evaluar_vuelo_adelantado 0.000s
+2026-11-21 03:00:16,689 WARNING turno=C05-r1-2ee390 TOOL evalua_vuelo_adelantado 0.002s (alias: el modelo escribió mal el nombre)
+2026-11-21 03:00:16,773 WARNING turno=C05-r1-2ee390 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:00:27,237 INFO turno=C05-r1-2ee390 LLM 10.55s in=1447 out=165 -> registrar_caso
+2026-11-21 03:00:27,248 INFO turno=C05-r1-2ee390 TOOL registrar_caso 0.009s
+2026-11-21 03:00:27,334 WARNING turno=C05-r1-2ee390 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:00:37,464 WARNING turno=C05-r1-2ee390 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:00:42,757 INFO turno=C05-r1-2ee390 LLM 15.51s in=1553 out=455 -> respuesta_final
+2026-11-21 03:00:43,027 INFO turno=C05-r1-2ee390 FIN 50.334s herramientas=['consultar_reserva', 'recordar_historial', 'buscar_politicas', 'evaluar_vuelo_adelantado', 'registrar_caso'] error=None
+2026-11-21 03:00:45,035 INFO turno=C06-r1-cb4103 INICIO caso=C06 rep=1 consulta='Mi reserva es ZZZ999, ¿cuánto equipaje tengo?'
+2026-11-21 03:00:45,798 INFO turno=C06-r1-cb4103 LLM 0.76s in=796 out=96 -> consultar_reserva
+2026-11-21 03:00:45,801 INFO turno=C06-r1-cb4103 TOOL consultar_reserva 0.001s
+2026-11-21 03:00:45,889 WARNING turno=C06-r1-cb4103 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:00:51,001 WARNING turno=C06-r1-cb4103 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:00:56,463 ERROR turno=C06-r1-cb4103 LLM ERROR KeyboardInterrupt: 
+2026-11-21 03:00:57,648 INFO turno=C06-r1-b159a1 INICIO caso=C06 rep=1 consulta='Mi reserva es ZZZ999, ¿cuánto equipaje tengo?'
+2026-11-21 03:00:58,311 INFO turno=C06-r1-b159a1 LLM 0.66s in=865 out=139 -> respuesta_final
+2026-11-21 03:00:58,313 INFO turno=C06-r1-b159a1 FIN 0.665s herramientas=[] error=None
+2026-11-21 03:01:00,323 INFO turno=C07-r1-723045 INICIO caso=C07 rep=1 consulta='¿Puedo viajar con mi perro en la cabina?'
+2026-11-21 03:01:00,442 WARNING turno=C07-r1-723045 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:01:08,781 INFO turno=C07-r1-723045 LLM 8.45s in=790 out=161 -> registrar_caso
+2026-11-21 03:01:08,792 INFO turno=C07-r1-723045 TOOL registrar_caso 0.008s
+2026-11-21 03:01:08,943 WARNING turno=C07-r1-723045 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:01:14,898 INFO turno=C07-r1-723045 LLM 6.10s in=871 out=260 -> respuesta_final
+2026-11-21 03:01:14,900 INFO turno=C07-r1-723045 FIN 14.578s herramientas=['registrar_caso'] error=None
+2026-11-21 03:01:16,909 INFO turno=C08-r1-1d305b INICIO caso=C08 rep=1 consulta='Reserva RAG276: me adelantaron el vuelo 30 minutos y además quiero saber cómo acumulo millas'
+2026-11-21 03:01:16,998 WARNING turno=C08-r1-1d305b HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:01:19,968 INFO turno=C08-r1-1d305b LLM 3.06s in=844 out=134 -> consultar_reserva
+2026-11-21 03:01:19,971 INFO turno=C08-r1-1d305b TOOL consultar_reserva 0.001s
+2026-11-21 03:01:20,050 WARNING turno=C08-r1-1d305b HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:01:25,556 INFO turno=C08-r1-1d305b LLM 5.58s in=938 out=96 -> recordar_historial
+2026-11-21 03:01:25,560 INFO turno=C08-r1-1d305b TOOL recordar_historial 0.001s
+2026-11-21 03:01:25,632 WARNING turno=C08-r1-1d305b HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:01:33,992 INFO turno=C08-r1-1d305b LLM 8.43s in=1009 out=56 -> buscar_politicas
+2026-11-21 03:01:34,273 INFO turno=C08-r1-1d305b TOOL buscar_politicas 0.278s
+2026-11-21 03:01:34,361 WARNING turno=C08-r1-1d305b HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:01:43,487 WARNING turno=C08-r1-1d305b HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:01:47,048 INFO turno=C08-r1-1d305b LLM 12.77s in=1308 out=101 -> evalua_vuelo_adelantado
+2026-11-21 03:01:47,052 INFO turno=C08-r1-1d305b TOOL evaluar_vuelo_adelantado 0.000s
+2026-11-21 03:01:47,052 WARNING turno=C08-r1-1d305b TOOL evalua_vuelo_adelantado 0.001s (alias: el modelo escribió mal el nombre)
+2026-11-21 03:01:47,133 WARNING turno=C08-r1-1d305b HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:01:48,975 INFO turno=C08-r1-1d305b LLM 1.92s in=1457 out=81 -> buscar_politicas
+2026-11-21 03:01:49,258 INFO turno=C08-r1-1d305b TOOL buscar_politicas 0.279s
+2026-11-21 03:01:49,347 WARNING turno=C08-r1-1d305b HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:01:59,446 WARNING turno=C08-r1-1d305b HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:02:01,318 INFO turno=C08-r1-1d305b LLM 12.06s in=1709 out=155 -> registrar_caso
+2026-11-21 03:02:01,332 INFO turno=C08-r1-1d305b TOOL registrar_caso 0.010s
+2026-11-21 03:02:01,428 WARNING turno=C08-r1-1d305b HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:02:12,722 WARNING turno=C08-r1-1d305b HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:02:17,259 INFO turno=C08-r1-1d305b LLM 15.92s in=1808 out=586 -> respuesta_final
+2026-11-21 03:02:17,519 INFO turno=C08-r1-1d305b FIN 60.61s herramientas=['consultar_reserva', 'recordar_historial', 'buscar_politicas', 'evaluar_vuelo_adelantado', 'buscar_politicas', 'registrar_caso'] error=None
+2026-11-21 03:02:19,528 INFO turno=C09-r1-5c148f INICIO caso=C09 rep=1 consulta='¿Puedo cambiar mi vuelo de mañana?'
+2026-11-21 03:02:19,660 WARNING turno=C09-r1-5c148f HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:02:26,336 INFO turno=C09-r1-5c148f LLM 6.80s in=789 out=117 -> buscar_politicas
+2026-11-21 03:02:26,599 INFO turno=C09-r1-5c148f TOOL buscar_politicas 0.260s
+2026-11-21 03:02:26,679 WARNING turno=C09-r1-5c148f HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:02:30,185 INFO turno=C09-r1-5c148f LLM 3.58s in=1082 out=364 -> respuesta_final
+2026-11-21 03:02:30,187 INFO turno=C09-r1-5c148f FIN 10.658s herramientas=['buscar_politicas'] error=None
+2026-11-21 03:02:32,196 INFO turno=C10-r1-previa-f2a586 INICIO caso=C10 rep=1 consulta='Reserva CKJ320: LATAM adelantó 40 minutos el vuelo de mañana, ¿lo puedo cambiar gratis?'
+2026-11-21 03:02:32,279 WARNING turno=C10-r1-previa-f2a586 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:02:40,820 INFO turno=C10-r1-previa-f2a586 LLM 8.62s in=827 out=95 -> consultar_reserva
+2026-11-21 03:02:40,823 INFO turno=C10-r1-previa-f2a586 TOOL consultar_reserva 0.001s
+2026-11-21 03:02:40,909 WARNING turno=C10-r1-previa-f2a586 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:02:46,468 INFO turno=C10-r1-previa-f2a586 LLM 5.64s in=920 out=93 -> recordar_historial
+2026-11-21 03:02:46,472 INFO turno=C10-r1-previa-f2a586 TOOL recordar_historial 0.001s
+2026-11-21 03:02:46,557 WARNING turno=C10-r1-previa-f2a586 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:02:52,668 WARNING turno=C10-r1-previa-f2a586 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:02:54,279 INFO turno=C10-r1-previa-f2a586 LLM 7.80s in=992 out=101 -> buscar_politicas
+2026-11-21 03:02:54,568 INFO turno=C10-r1-previa-f2a586 TOOL buscar_politicas 0.287s
+2026-11-21 03:02:54,638 WARNING turno=C10-r1-previa-f2a586 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:03:05,156 INFO turno=C10-r1-previa-f2a586 LLM 10.59s in=1298 out=58 -> evalua_vuelo_adelantado
+2026-11-21 03:03:05,160 INFO turno=C10-r1-previa-f2a586 TOOL evaluar_vuelo_adelantado 0.000s
+2026-11-21 03:03:05,160 WARNING turno=C10-r1-previa-f2a586 TOOL evalua_vuelo_adelantado 0.002s (alias: el modelo escribió mal el nombre)
+2026-11-21 03:03:05,249 WARNING turno=C10-r1-previa-f2a586 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:03:14,942 INFO turno=C10-r1-previa-f2a586 LLM 9.78s in=1447 out=95 -> registrar_caso
+2026-11-21 03:03:14,955 INFO turno=C10-r1-previa-f2a586 TOOL registrar_caso 0.010s
+2026-11-21 03:03:15,047 WARNING turno=C10-r1-previa-f2a586 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:03:28,491 INFO turno=C10-r1-previa-f2a586 LLM 13.53s in=1544 out=433 -> respuesta_final
+2026-11-21 03:03:28,761 INFO turno=C10-r1-previa-f2a586 FIN 56.565s herramientas=['consultar_reserva', 'recordar_historial', 'buscar_politicas', 'evaluar_vuelo_adelantado', 'registrar_caso'] error=None
+2026-11-21 03:03:30,762 INFO turno=C10-r1-d84159 INICIO caso=C10 rep=1 consulta='Hola, soy de la reserva CKJ320, ¿qué pasó con lo del vuelo adelantado?'
+2026-11-21 03:03:30,850 WARNING turno=C10-r1-d84159 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:03:32,295 INFO turno=C10-r1-d84159 LLM 1.53s in=821 out=92 -> consultar_reserva
+2026-11-21 03:03:32,298 INFO turno=C10-r1-d84159 TOOL consultar_reserva 0.001s
+2026-11-21 03:03:32,439 WARNING turno=C10-r1-d84159 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:03:39,990 INFO turno=C10-r1-d84159 LLM 7.69s in=914 out=68 -> recordar_historial
+2026-11-21 03:03:40,241 INFO turno=C10-r1-d84159 TOOL recordar_historial 0.248s
+2026-11-21 03:03:40,354 WARNING turno=C10-r1-d84159 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:03:51,187 INFO turno=C10-r1-d84159 LLM 10.94s in=1115 out=131 -> buscar_politicas
+2026-11-21 03:03:51,390 INFO turno=C10-r1-d84159 TOOL buscar_politicas 0.200s
+2026-11-21 03:03:51,480 WARNING turno=C10-r1-d84159 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:03:59,778 INFO turno=C10-r1-d84159 LLM 8.39s in=1408 out=393 -> respuesta_final
+2026-11-21 03:04:00,029 INFO turno=C10-r1-d84159 FIN 29.266s herramientas=['consultar_reserva', 'recordar_historial', 'buscar_politicas'] error=None
+2026-11-21 03:04:02,038 INFO turno=C01-r2-b33a24 INICIO caso=C01 rep=2 consulta='Tengo la reserva RAG276, ¿cuánto equipaje puedo llevar?'
+2026-11-21 03:04:02,135 WARNING turno=C01-r2-b33a24 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:04:05,752 INFO turno=C01-r2-b33a24 LLM 3.71s in=797 out=63 -> consultar_reserva
+2026-11-21 03:04:05,755 INFO turno=C01-r2-b33a24 TOOL consultar_reserva 0.001s
+2026-11-21 03:04:05,817 WARNING turno=C01-r2-b33a24 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:04:10,947 WARNING turno=C01-r2-b33a24 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:04:13,405 INFO turno=C01-r2-b33a24 LLM 7.65s in=891 out=92 -> recordar_historial
+2026-11-21 03:04:13,408 INFO turno=C01-r2-b33a24 TOOL recordar_historial 0.001s
+2026-11-21 03:04:13,488 WARNING turno=C01-r2-b33a24 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:04:18,615 WARNING turno=C01-r2-b33a24 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:04:20,105 INFO turno=C01-r2-b33a24 LLM 6.69s in=947 out=53 -> buscar_politicas
+2026-11-21 03:04:20,368 INFO turno=C01-r2-b33a24 TOOL buscar_politicas 0.261s
+2026-11-21 03:04:20,481 WARNING turno=C01-r2-b33a24 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:04:24,192 INFO turno=C01-r2-b33a24 LLM 3.82s in=1143 out=528 -> respuesta_final
+2026-11-21 03:04:24,383 INFO turno=C01-r2-b33a24 FIN 22.345s herramientas=['consultar_reserva', 'recordar_historial', 'buscar_politicas'] error=None
+2026-11-21 03:04:26,393 INFO turno=C02-r2-800754 INICIO caso=C02 rep=2 consulta='hola mi reserva es rag276 cuanto equipaje llevo'
+2026-11-21 03:04:26,475 WARNING turno=C02-r2-800754 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:04:36,841 INFO turno=C02-r2-800754 LLM 10.44s in=792 out=69 -> consultar_reserva
+2026-11-21 03:04:36,844 INFO turno=C02-r2-800754 TOOL consultar_reserva 0.001s
+2026-11-21 03:04:36,953 WARNING turno=C02-r2-800754 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:04:39,618 INFO turno=C02-r2-800754 LLM 2.77s in=886 out=96 -> buscar_politicas
+2026-11-21 03:04:39,861 INFO turno=C02-r2-800754 TOOL buscar_politicas 0.241s
+2026-11-21 03:04:39,958 WARNING turno=C02-r2-800754 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:04:45,747 INFO turno=C02-r2-800754 LLM 5.88s in=1084 out=710 -> respuesta_final
+2026-11-21 03:04:46,083 INFO turno=C02-r2-800754 FIN 19.69s herramientas=['consultar_reserva', 'buscar_politicas'] error=None
+2026-11-21 03:04:48,091 INFO turno=C03-r2-cae1b6 INICIO caso=C03 rep=2 consulta='Reserva QVA863: me adelantaron el vuelo 10 minutos, ¿lo puedo cambiar gratis?'
+2026-11-21 03:04:48,215 WARNING turno=C03-r2-cae1b6 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:04:57,855 INFO turno=C03-r2-cae1b6 LLM 9.76s in=824 out=132 -> consultar_reserva
+2026-11-21 03:04:57,857 INFO turno=C03-r2-cae1b6 TOOL consultar_reserva 0.001s
+2026-11-21 03:04:57,913 WARNING turno=C03-r2-cae1b6 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:05:04,050 WARNING turno=C03-r2-cae1b6 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:05:06,230 INFO turno=C03-r2-cae1b6 LLM 8.37s in=918 out=86 -> recordar_historial
+2026-11-21 03:05:06,234 INFO turno=C03-r2-cae1b6 TOOL recordar_historial 0.001s
+2026-11-21 03:05:06,820 INFO turno=C03-r2-cae1b6 LLM 0.58s in=987 out=90 -> buscar_politicas
+2026-11-21 03:05:07,085 INFO turno=C03-r2-cae1b6 TOOL buscar_politicas 0.263s
+2026-11-21 03:05:07,175 WARNING turno=C03-r2-cae1b6 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:05:13,455 INFO turno=C03-r2-cae1b6 LLM 6.37s in=1285 out=77 -> evalua_vuelo_adelantado
+2026-11-21 03:05:13,458 INFO turno=C03-r2-cae1b6 TOOL evaluar_vuelo_adelantado 0.000s
+2026-11-21 03:05:13,459 WARNING turno=C03-r2-cae1b6 TOOL evalua_vuelo_adelantado 0.001s (alias: el modelo escribió mal el nombre)
+2026-11-21 03:05:13,541 WARNING turno=C03-r2-cae1b6 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:05:17,622 WARNING turno=C03-r2-cae1b6 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:05:22,898 INFO turno=C03-r2-cae1b6 LLM 9.44s in=1401 out=420 -> respuesta_final
+2026-11-21 03:05:23,182 INFO turno=C03-r2-cae1b6 FIN 35.091s herramientas=['consultar_reserva', 'recordar_historial', 'buscar_politicas', 'evaluar_vuelo_adelantado'] error=None
+2026-11-21 03:05:25,191 INFO turno=C04-r2-b27c54 INICIO caso=C04 rep=2 consulta='Reserva QVA863: LATAM adelantó mi vuelo 16 minutos, ¿qué puedo hacer?'
+2026-11-21 03:05:25,273 WARNING turno=C04-r2-b27c54 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:05:27,347 WARNING turno=C04-r2-b27c54 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:05:28,830 INFO turno=C04-r2-b27c54 LLM 3.64s in=824 out=100 -> consultar_reserva
+2026-11-21 03:05:28,833 INFO turno=C04-r2-b27c54 TOOL consultar_reserva 0.001s
+2026-11-21 03:05:28,920 WARNING turno=C04-r2-b27c54 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:05:34,586 INFO turno=C04-r2-b27c54 LLM 5.75s in=918 out=93 -> recordar_historial
+2026-11-21 03:05:34,593 INFO turno=C04-r2-b27c54 TOOL recordar_historial 0.001s
+2026-11-21 03:05:34,666 WARNING turno=C04-r2-b27c54 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:05:37,372 INFO turno=C04-r2-b27c54 LLM 2.77s in=987 out=68 -> buscar_politicas
+2026-11-21 03:05:37,634 INFO turno=C04-r2-b27c54 TOOL buscar_politicas 0.259s
+2026-11-21 03:05:37,705 WARNING turno=C04-r2-b27c54 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:05:44,947 WARNING turno=C04-r2-b27c54 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:05:49,564 INFO turno=C04-r2-b27c54 LLM 11.93s in=1285 out=61 -> evalua_vuelo_adelantado
+2026-11-21 03:05:49,568 INFO turno=C04-r2-b27c54 TOOL evaluar_vuelo_adelantado 0.000s
+2026-11-21 03:05:49,568 WARNING turno=C04-r2-b27c54 TOOL evalua_vuelo_adelantado 0.002s (alias: el modelo escribió mal el nombre)
+2026-11-21 03:05:49,671 WARNING turno=C04-r2-b27c54 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:05:59,473 INFO turno=C04-r2-b27c54 LLM 9.90s in=1434 out=147 -> registrar_caso
+2026-11-21 03:05:59,484 INFO turno=C04-r2-b27c54 TOOL registrar_caso 0.008s
+2026-11-21 03:05:59,575 WARNING turno=C04-r2-b27c54 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:06:04,709 WARNING turno=C04-r2-b27c54 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:06:07,617 INFO turno=C04-r2-b27c54 LLM 8.13s in=1542 out=268 -> respuesta_final
+2026-11-21 03:06:07,902 INFO turno=C04-r2-b27c54 FIN 42.711s herramientas=['consultar_reserva', 'recordar_historial', 'buscar_politicas', 'evaluar_vuelo_adelantado', 'registrar_caso'] error=None
+2026-11-21 03:06:09,911 INFO turno=C05-r2-364bdd INICIO caso=C05 rep=2 consulta='Reserva CKJ320: LATAM adelantó 40 minutos el vuelo de mañana, ¿lo puedo cambiar gratis?'
+2026-11-21 03:06:10,048 WARNING turno=C05-r2-364bdd HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:06:14,168 WARNING turno=C05-r2-364bdd HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:06:15,629 INFO turno=C05-r2-364bdd LLM 5.71s in=827 out=91 -> consultar_reserva
+2026-11-21 03:06:15,633 INFO turno=C05-r2-364bdd TOOL consultar_reserva 0.001s
+2026-11-21 03:06:15,730 WARNING turno=C05-r2-364bdd HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:06:19,831 WARNING turno=C05-r2-364bdd HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:06:21,318 INFO turno=C05-r2-364bdd LLM 5.68s in=920 out=89 -> recordar_historial
+2026-11-21 03:06:21,322 INFO turno=C05-r2-364bdd TOOL recordar_historial 0.001s
+2026-11-21 03:06:21,423 WARNING turno=C05-r2-364bdd HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:06:27,549 WARNING turno=C05-r2-364bdd HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:06:28,647 WARNING turno=C05-r2-364bdd HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:06:30,232 INFO turno=C05-r2-364bdd LLM 8.91s in=992 out=101 -> buscar_politicas
+2026-11-21 03:06:30,491 INFO turno=C05-r2-364bdd TOOL buscar_politicas 0.257s
+2026-11-21 03:06:30,575 WARNING turno=C05-r2-364bdd HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:06:38,381 INFO turno=C05-r2-364bdd LLM 7.89s in=1298 out=58 -> evalua_vuelo_adelantado
+2026-11-21 03:06:38,384 INFO turno=C05-r2-364bdd TOOL evaluar_vuelo_adelantado 0.000s
+2026-11-21 03:06:38,385 WARNING turno=C05-r2-364bdd TOOL evalua_vuelo_adelantado 0.001s (alias: el modelo escribió mal el nombre)
+2026-11-21 03:06:38,466 WARNING turno=C05-r2-364bdd HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:06:44,597 WARNING turno=C05-r2-364bdd HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:06:46,538 INFO turno=C05-r2-364bdd LLM 8.15s in=1447 out=144 -> registrar_caso
+2026-11-21 03:06:46,549 INFO turno=C05-r2-364bdd TOOL registrar_caso 0.008s
+2026-11-21 03:06:46,671 WARNING turno=C05-r2-364bdd HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:06:56,561 INFO turno=C05-r2-364bdd LLM 10.01s in=1550 out=268 -> respuesta_final
+2026-11-21 03:06:56,836 INFO turno=C05-r2-364bdd FIN 46.925s herramientas=['consultar_reserva', 'recordar_historial', 'buscar_politicas', 'evaluar_vuelo_adelantado', 'registrar_caso'] error=None
+2026-11-21 03:06:58,845 INFO turno=C06-r2-5235f2 INICIO caso=C06 rep=2 consulta='Mi reserva es ZZZ999, ¿cuánto equipaje tengo?'
+2026-11-21 03:06:59,479 INFO turno=C06-r2-5235f2 LLM 0.63s in=796 out=94 -> consultar_reserva
+2026-11-21 03:06:59,482 INFO turno=C06-r2-5235f2 TOOL consultar_reserva 0.001s
+2026-11-21 03:06:59,570 WARNING turno=C06-r2-5235f2 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:07:02,023 INFO turno=C06-r2-5235f2 LLM 2.54s in=861 out=124 -> respuesta_final
+2026-11-21 03:07:02,025 INFO turno=C06-r2-5235f2 FIN 3.18s herramientas=['consultar_reserva'] error=None
+2026-11-21 03:07:04,035 INFO turno=C07-r2-e2c158 INICIO caso=C07 rep=2 consulta='¿Puedo viajar con mi perro en la cabina?'
+2026-11-21 03:07:04,106 WARNING turno=C07-r2-e2c158 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:07:08,789 INFO turno=C07-r2-e2c158 LLM 4.75s in=790 out=159 -> registrar_caso
+2026-11-21 03:07:08,799 INFO turno=C07-r2-e2c158 TOOL registrar_caso 0.008s
+2026-11-21 03:07:08,887 WARNING turno=C07-r2-e2c158 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:07:13,978 INFO turno=C07-r2-e2c158 LLM 5.17s in=871 out=164 -> respuesta_final
+2026-11-21 03:07:13,980 INFO turno=C07-r2-e2c158 FIN 9.944s herramientas=['registrar_caso'] error=None
+2026-11-21 03:07:15,987 INFO turno=C08-r2-82dbb4 INICIO caso=C08 rep=2 consulta='Reserva RAG276: me adelantaron el vuelo 30 minutos y además quiero saber cómo acumulo millas'
+2026-11-21 03:07:16,133 WARNING turno=C08-r2-82dbb4 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:07:18,248 WARNING turno=C08-r2-82dbb4 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:07:21,010 INFO turno=C08-r2-82dbb4 LLM 5.02s in=844 out=137 -> consultar_reserva
+2026-11-21 03:07:21,014 INFO turno=C08-r2-82dbb4 TOOL consultar_reserva 0.001s
+2026-11-21 03:07:21,212 WARNING turno=C08-r2-82dbb4 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:07:25,290 WARNING turno=C08-r2-82dbb4 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:07:27,051 INFO turno=C08-r2-82dbb4 LLM 6.03s in=938 out=70 -> recordar_historial
+2026-11-21 03:07:27,054 INFO turno=C08-r2-82dbb4 TOOL recordar_historial 0.001s
+2026-11-21 03:07:27,636 INFO turno=C08-r2-82dbb4 LLM 0.58s in=1009 out=87 -> buscar_politicas
+2026-11-21 03:07:27,886 INFO turno=C08-r2-82dbb4 TOOL buscar_politicas 0.249s
+2026-11-21 03:07:28,037 WARNING turno=C08-r2-82dbb4 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:07:35,168 WARNING turno=C08-r2-82dbb4 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:07:36,576 INFO turno=C08-r2-82dbb4 LLM 8.69s in=1305 out=58 -> evalua_vuelo_adelantado
+2026-11-21 03:07:36,580 INFO turno=C08-r2-82dbb4 TOOL evaluar_vuelo_adelantado 0.000s
+2026-11-21 03:07:36,580 WARNING turno=C08-r2-82dbb4 TOOL evalua_vuelo_adelantado 0.002s (alias: el modelo escribió mal el nombre)
+2026-11-21 03:07:36,693 WARNING turno=C08-r2-82dbb4 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:07:42,173 INFO turno=C08-r2-82dbb4 LLM 5.59s in=1454 out=86 -> buscar_politicas
+2026-11-21 03:07:42,436 INFO turno=C08-r2-82dbb4 TOOL buscar_politicas 0.260s
+2026-11-21 03:07:42,511 WARNING turno=C08-r2-82dbb4 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:07:51,150 INFO turno=C08-r2-82dbb4 LLM 8.71s in=1703 out=136 -> registrar_caso
+2026-11-21 03:07:51,161 INFO turno=C08-r2-82dbb4 TOOL registrar_caso 0.009s
+2026-11-21 03:07:51,231 WARNING turno=C08-r2-82dbb4 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:07:57,340 WARNING turno=C08-r2-82dbb4 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:08:03,629 INFO turno=C08-r2-82dbb4 LLM 12.47s in=1802 out=764 -> respuesta_final
+2026-11-21 03:08:03,916 INFO turno=C08-r2-82dbb4 FIN 47.928s herramientas=['consultar_reserva', 'recordar_historial', 'buscar_politicas', 'evaluar_vuelo_adelantado', 'buscar_politicas', 'registrar_caso'] error=None
+2026-11-21 03:08:05,924 INFO turno=C09-r2-224719 INICIO caso=C09 rep=2 consulta='¿Puedo cambiar mi vuelo de mañana?'
+2026-11-21 03:08:06,029 WARNING turno=C09-r2-224719 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:08:09,103 WARNING turno=C09-r2-224719 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:08:10,816 INFO turno=C09-r2-224719 LLM 4.89s in=789 out=126 -> buscar_politicas
+2026-11-21 03:08:11,065 INFO turno=C09-r2-224719 TOOL buscar_politicas 0.246s
+2026-11-21 03:08:11,170 WARNING turno=C09-r2-224719 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:08:17,458 INFO turno=C09-r2-224719 LLM 6.39s in=1082 out=372 -> respuesta_final
+2026-11-21 03:08:17,460 INFO turno=C09-r2-224719 FIN 11.536s herramientas=['buscar_politicas'] error=None
+2026-11-21 03:08:19,467 INFO turno=C10-r2-previa-a45112 INICIO caso=C10 rep=2 consulta='Reserva CKJ320: LATAM adelantó 40 minutos el vuelo de mañana, ¿lo puedo cambiar gratis?'
+2026-11-21 03:08:19,552 WARNING turno=C10-r2-previa-a45112 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:08:24,037 INFO turno=C10-r2-previa-a45112 LLM 4.57s in=827 out=122 -> consultar_reserva
+2026-11-21 03:08:24,041 INFO turno=C10-r2-previa-a45112 TOOL consultar_reserva 0.001s
+2026-11-21 03:08:24,135 WARNING turno=C10-r2-previa-a45112 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:08:30,264 WARNING turno=C10-r2-previa-a45112 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:08:32,134 INFO turno=C10-r2-previa-a45112 LLM 8.09s in=920 out=90 -> recordar_historial
+2026-11-21 03:08:32,137 INFO turno=C10-r2-previa-a45112 TOOL recordar_historial 0.001s
+2026-11-21 03:08:32,218 WARNING turno=C10-r2-previa-a45112 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:08:35,729 INFO turno=C10-r2-previa-a45112 LLM 3.59s in=992 out=101 -> buscar_politicas
+2026-11-21 03:08:36,006 INFO turno=C10-r2-previa-a45112 TOOL buscar_politicas 0.275s
+2026-11-21 03:08:36,095 WARNING turno=C10-r2-previa-a45112 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:08:44,426 INFO turno=C10-r2-previa-a45112 LLM 8.42s in=1298 out=108 -> evalua_vuelo_adelantado
+2026-11-21 03:08:44,430 INFO turno=C10-r2-previa-a45112 TOOL evaluar_vuelo_adelantado 0.000s
+2026-11-21 03:08:44,430 WARNING turno=C10-r2-previa-a45112 TOOL evalua_vuelo_adelantado 0.001s (alias: el modelo escribió mal el nombre)
+2026-11-21 03:08:44,514 WARNING turno=C10-r2-previa-a45112 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:08:48,059 INFO turno=C10-r2-previa-a45112 LLM 3.63s in=1458 out=139 -> registrar_caso
+2026-11-21 03:08:48,071 INFO turno=C10-r2-previa-a45112 TOOL registrar_caso 0.010s
+2026-11-21 03:08:48,220 WARNING turno=C10-r2-previa-a45112 HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:09:05,024 INFO turno=C10-r2-previa-a45112 LLM 16.95s in=1567 out=539 -> respuesta_final
+2026-11-21 03:09:05,304 INFO turno=C10-r2-previa-a45112 FIN 45.836s herramientas=['consultar_reserva', 'recordar_historial', 'buscar_politicas', 'evaluar_vuelo_adelantado', 'registrar_caso'] error=None
+2026-11-21 03:09:07,304 INFO turno=C10-r2-87e31d INICIO caso=C10 rep=2 consulta='Hola, soy de la reserva CKJ320, ¿qué pasó con lo del vuelo adelantado?'
+2026-11-21 03:09:07,369 WARNING turno=C10-r2-87e31d HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:09:08,743 INFO turno=C10-r2-87e31d LLM 1.44s in=821 out=94 -> consultar_reserva
+2026-11-21 03:09:08,747 INFO turno=C10-r2-87e31d TOOL consultar_reserva 0.001s
+2026-11-21 03:09:08,812 WARNING turno=C10-r2-87e31d HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:09:15,311 INFO turno=C10-r2-87e31d LLM 6.56s in=914 out=67 -> recordar_historial
+2026-11-21 03:09:15,562 INFO turno=C10-r2-87e31d TOOL recordar_historial 0.249s
+2026-11-21 03:09:15,652 WARNING turno=C10-r2-87e31d HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:09:17,805 WARNING turno=C10-r2-87e31d HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:09:19,251 INFO turno=C10-r2-87e31d LLM 3.69s in=1115 out=98 -> buscar_politicas
+2026-11-21 03:09:19,432 INFO turno=C10-r2-87e31d TOOL buscar_politicas 0.179s
+2026-11-21 03:09:19,505 WARNING turno=C10-r2-87e31d HTTP 429 api.groq.com: límite de tokens por minuto, el cliente reintenta
+2026-11-21 03:09:29,476 INFO turno=C10-r2-87e31d LLM 10.04s in=1414 out=464 -> respuesta_final
+2026-11-21 03:09:29,746 INFO turno=C10-r2-87e31d FIN 22.442s herramientas=['consultar_reserva', 'recordar_historial', 'buscar_politicas'] error=None

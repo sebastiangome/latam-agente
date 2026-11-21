@@ -29,6 +29,8 @@ Continuación del EP1 ([`LATAM_RAG_Agent.ipynb`](LATAM_RAG_Agent.ipynb)). El cha
 | `eventos.jsonl` | llamada al LLM, herramienta o request HTTP | turno_id, tipo, nombre, latencia_s, tokens, decision, estado (HTTP), alias, error |
 | `agente.log` | evento, en texto | nivel INFO / WARNING (429, alias) / ERROR |
 
+La carpeta `logs/` trae la ejecución real del 21-11-2026 (`openai/gpt-oss-120b`, 20 turnos). `turnos.jsonl` está reevaluado con el evaluador corregido (guiones tipográficos en `CASO‑0001` y respuesta completa); el registro original de esa ejecución está en `turnos_original.jsonl`.
+
 **Cómo ejecutar**
 1. Abrir el notebook EP3 en Colab con los Secrets `LLM_API_KEY` y `GOOGLE_API_KEY` y `Ejecutar todas`. Con el plan gratuito de Groq (8.000 tokens/min en `gpt-oss-120b`) la batería tarda varios minutos; los 429 se reintentan solos y quedan registrados. Si se corta, volver a ejecutar la celda de la batería: salta los turnos ya hechos.
 2. Descargar `logs.zip` (Módulo 10), descomprimirlo en `logs/` del repositorio y subirlo a GitHub.

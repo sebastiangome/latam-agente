@@ -1,0 +1,380 @@
+{"ts": "2026-11-21T02:58:10.934", "turno_id": "C01-r1-d9f0e2", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T02:58:10.941", "turno_id": "C01-r1-d9f0e2", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 0.517, "tokens_in": 797, "tokens_out": 73, "decision": "consultar_reserva"}
+{"ts": "2026-11-21T02:58:10.948", "turno_id": "C01-r1-d9f0e2", "tipo": "herramienta", "nombre": "consultar_reserva", "alias": false, "latencia_s": 0.001}
+{"ts": "2026-11-21T02:58:11.340", "turno_id": "C01-r1-d9f0e2", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T02:58:11.344", "turno_id": "C01-r1-d9f0e2", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 0.387, "tokens_in": 891, "tokens_out": 69, "decision": "buscar_politicas"}
+{"ts": "2026-11-21T02:58:11.612", "turno_id": "C01-r1-d9f0e2", "tipo": "herramienta", "nombre": "buscar_politicas", "alias": false, "latencia_s": 0.258}
+{"ts": "2026-11-21T02:58:13.142", "turno_id": "C01-r1-d9f0e2", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T02:58:13.144", "turno_id": "C01-r1-d9f0e2", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 1.52, "tokens_in": 1087, "tokens_out": 615, "decision": "respuesta_final"}
+{"ts": "2026-11-21T02:58:15.772", "turno_id": "C02-r1-5cd279", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T02:58:15.774", "turno_id": "C02-r1-5cd279", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 0.394, "tokens_in": 792, "tokens_out": 85, "decision": "consultar_reserva"}
+{"ts": "2026-11-21T02:58:15.778", "turno_id": "C02-r1-5cd279", "tipo": "herramienta", "nombre": "consultar_reserva", "alias": false, "latencia_s": 0.001}
+{"ts": "2026-11-21T02:58:16.356", "turno_id": "C02-r1-5cd279", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T02:58:16.364", "turno_id": "C02-r1-5cd279", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 0.579, "tokens_in": 886, "tokens_out": 96, "decision": "buscar_politicas"}
+{"ts": "2026-11-21T02:58:16.584", "turno_id": "C02-r1-5cd279", "tipo": "herramienta", "nombre": "buscar_politicas", "alias": false, "latencia_s": 0.206}
+{"ts": "2026-11-21T02:58:18.533", "turno_id": "C02-r1-5cd279", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T02:58:18.543", "turno_id": "C02-r1-5cd279", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 1.949, "tokens_in": 1084, "tokens_out": 746, "decision": "respuesta_final"}
+{"ts": "2026-11-21T02:58:21.267", "turno_id": "C03-r1-1c8e9f", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T02:58:21.273", "turno_id": "C03-r1-1c8e9f", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 0.434, "tokens_in": 824, "tokens_out": 97, "decision": "consultar_reserva"}
+{"ts": "2026-11-21T02:58:21.288", "turno_id": "C03-r1-1c8e9f", "tipo": "herramienta", "nombre": "consultar_reserva", "alias": false, "latencia_s": 0.001}
+{"ts": "2026-11-21T02:58:22.067", "turno_id": "C03-r1-1c8e9f", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T02:58:22.069", "turno_id": "C03-r1-1c8e9f", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 0.768, "tokens_in": 918, "tokens_out": 88, "decision": "recordar_historial"}
+{"ts": "2026-11-21T02:58:22.073", "turno_id": "C03-r1-1c8e9f", "tipo": "herramienta", "nombre": "recordar_historial", "alias": false, "latencia_s": 0.001}
+{"ts": "2026-11-21T02:58:22.155", "turno_id": "C03-r1-1c8e9f", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T02:58:30.927", "turno_id": "C03-r1-1c8e9f", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T02:58:30.935", "turno_id": "C03-r1-1c8e9f", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 8.859, "tokens_in": 987, "tokens_out": 98, "decision": "buscar_politicas"}
+{"ts": "2026-11-21T02:58:31.269", "turno_id": "C03-r1-1c8e9f", "tipo": "herramienta", "nombre": "buscar_politicas", "alias": false, "latencia_s": 0.321}
+{"ts": "2026-11-21T02:58:31.388", "turno_id": "C03-r1-1c8e9f", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T02:58:41.941", "turno_id": "C03-r1-1c8e9f", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T02:58:41.942", "turno_id": "C03-r1-1c8e9f", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 10.665, "tokens_in": 1290, "tokens_out": 58, "decision": "evalua_vuelo_adelantado"}
+{"ts": "2026-11-21T02:58:41.945", "turno_id": "C03-r1-1c8e9f", "tipo": "herramienta", "nombre": "evaluar_vuelo_adelantado", "alias": false, "latencia_s": 0.0}
+{"ts": "2026-11-21T02:58:41.946", "turno_id": "C03-r1-1c8e9f", "tipo": "herramienta", "nombre": "evaluar_vuelo_adelantado", "alias": true, "latencia_s": 0.001}
+{"ts": "2026-11-21T02:58:42.027", "turno_id": "C03-r1-1c8e9f", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T02:58:53.102", "turno_id": "C03-r1-1c8e9f", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T02:58:53.108", "turno_id": "C03-r1-1c8e9f", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 11.16, "tokens_in": 1406, "tokens_out": 326, "decision": "respuesta_final"}
+{"ts": "2026-11-21T02:58:55.464", "turno_id": "C04-r1-4fe3ef", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T02:58:58.049", "turno_id": "C04-r1-4fe3ef", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T02:58:58.052", "turno_id": "C04-r1-4fe3ef", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 2.651, "tokens_in": 824, "tokens_out": 128, "decision": "consultar_reserva"}
+{"ts": "2026-11-21T02:58:58.061", "turno_id": "C04-r1-4fe3ef", "tipo": "herramienta", "nombre": "consultar_reserva", "alias": false, "latencia_s": 0.001}
+{"ts": "2026-11-21T02:58:58.153", "turno_id": "C04-r1-4fe3ef", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T02:59:05.262", "turno_id": "C04-r1-4fe3ef", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T02:59:08.722", "turno_id": "C04-r1-4fe3ef", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T02:59:08.724", "turno_id": "C04-r1-4fe3ef", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 10.656, "tokens_in": 918, "tokens_out": 93, "decision": "recordar_historial"}
+{"ts": "2026-11-21T02:59:08.727", "turno_id": "C04-r1-4fe3ef", "tipo": "herramienta", "nombre": "recordar_historial", "alias": false, "latencia_s": 0.001}
+{"ts": "2026-11-21T02:59:08.808", "turno_id": "C04-r1-4fe3ef", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T02:59:16.238", "turno_id": "C04-r1-4fe3ef", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T02:59:16.239", "turno_id": "C04-r1-4fe3ef", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 7.509, "tokens_in": 987, "tokens_out": 98, "decision": "buscar_politicas"}
+{"ts": "2026-11-21T02:59:16.492", "turno_id": "C04-r1-4fe3ef", "tipo": "herramienta", "nombre": "buscar_politicas", "alias": false, "latencia_s": 0.25}
+{"ts": "2026-11-21T02:59:16.557", "turno_id": "C04-r1-4fe3ef", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T02:59:22.951", "turno_id": "C04-r1-4fe3ef", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T02:59:22.952", "turno_id": "C04-r1-4fe3ef", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 6.458, "tokens_in": 1290, "tokens_out": 67, "decision": "evalua_vuelo_adelantado"}
+{"ts": "2026-11-21T02:59:22.956", "turno_id": "C04-r1-4fe3ef", "tipo": "herramienta", "nombre": "evaluar_vuelo_adelantado", "alias": false, "latencia_s": 0.001}
+{"ts": "2026-11-21T02:59:22.957", "turno_id": "C04-r1-4fe3ef", "tipo": "herramienta", "nombre": "evaluar_vuelo_adelantado", "alias": true, "latencia_s": 0.002}
+{"ts": "2026-11-21T02:59:23.033", "turno_id": "C04-r1-4fe3ef", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T02:59:34.767", "turno_id": "C04-r1-4fe3ef", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T02:59:34.769", "turno_id": "C04-r1-4fe3ef", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 11.809, "tokens_in": 1439, "tokens_out": 146, "decision": "registrar_caso"}
+{"ts": "2026-11-21T02:59:34.782", "turno_id": "C04-r1-4fe3ef", "tipo": "herramienta", "nombre": "registrar_caso", "alias": false, "latencia_s": 0.009}
+{"ts": "2026-11-21T02:59:34.868", "turno_id": "C04-r1-4fe3ef", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T02:59:43.976", "turno_id": "C04-r1-4fe3ef", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T02:59:50.412", "turno_id": "C04-r1-4fe3ef", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T02:59:50.414", "turno_id": "C04-r1-4fe3ef", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 15.629, "tokens_in": 1536, "tokens_out": 429, "decision": "respuesta_final"}
+{"ts": "2026-11-21T02:59:52.810", "turno_id": "C05-r1-2ee390", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T02:59:57.253", "turno_id": "C05-r1-2ee390", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T02:59:57.254", "turno_id": "C05-r1-2ee390", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 4.558, "tokens_in": 827, "tokens_out": 95, "decision": "consultar_reserva"}
+{"ts": "2026-11-21T02:59:57.257", "turno_id": "C05-r1-2ee390", "tipo": "herramienta", "nombre": "consultar_reserva", "alias": false, "latencia_s": 0.001}
+{"ts": "2026-11-21T02:59:57.366", "turno_id": "C05-r1-2ee390", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:00:02.877", "turno_id": "C05-r1-2ee390", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:00:02.879", "turno_id": "C05-r1-2ee390", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 5.619, "tokens_in": 920, "tokens_out": 93, "decision": "recordar_historial"}
+{"ts": "2026-11-21T03:00:02.882", "turno_id": "C05-r1-2ee390", "tipo": "herramienta", "nombre": "recordar_historial", "alias": false, "latencia_s": 0.001}
+{"ts": "2026-11-21T03:00:02.961", "turno_id": "C05-r1-2ee390", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:00:07.038", "turno_id": "C05-r1-2ee390", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:00:11.450", "turno_id": "C05-r1-2ee390", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:00:11.452", "turno_id": "C05-r1-2ee390", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 8.568, "tokens_in": 992, "tokens_out": 101, "decision": "buscar_politicas"}
+{"ts": "2026-11-21T03:00:11.726", "turno_id": "C05-r1-2ee390", "tipo": "herramienta", "nombre": "buscar_politicas", "alias": false, "latencia_s": 0.271}
+{"ts": "2026-11-21T03:00:11.806", "turno_id": "C05-r1-2ee390", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:00:16.683", "turno_id": "C05-r1-2ee390", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:00:16.685", "turno_id": "C05-r1-2ee390", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 4.956, "tokens_in": 1298, "tokens_out": 58, "decision": "evalua_vuelo_adelantado"}
+{"ts": "2026-11-21T03:00:16.688", "turno_id": "C05-r1-2ee390", "tipo": "herramienta", "nombre": "evaluar_vuelo_adelantado", "alias": false, "latencia_s": 0.0}
+{"ts": "2026-11-21T03:00:16.689", "turno_id": "C05-r1-2ee390", "tipo": "herramienta", "nombre": "evaluar_vuelo_adelantado", "alias": true, "latencia_s": 0.002}
+{"ts": "2026-11-21T03:00:16.773", "turno_id": "C05-r1-2ee390", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:00:27.236", "turno_id": "C05-r1-2ee390", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:00:27.237", "turno_id": "C05-r1-2ee390", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 10.546, "tokens_in": 1447, "tokens_out": 165, "decision": "registrar_caso"}
+{"ts": "2026-11-21T03:00:27.248", "turno_id": "C05-r1-2ee390", "tipo": "herramienta", "nombre": "registrar_caso", "alias": false, "latencia_s": 0.009}
+{"ts": "2026-11-21T03:00:27.334", "turno_id": "C05-r1-2ee390", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:00:37.464", "turno_id": "C05-r1-2ee390", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:00:42.756", "turno_id": "C05-r1-2ee390", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:00:42.757", "turno_id": "C05-r1-2ee390", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 15.506, "tokens_in": 1553, "tokens_out": 455, "decision": "respuesta_final"}
+{"ts": "2026-11-21T03:00:45.796", "turno_id": "C06-r1-cb4103", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:00:45.798", "turno_id": "C06-r1-cb4103", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 0.759, "tokens_in": 796, "tokens_out": 96, "decision": "consultar_reserva"}
+{"ts": "2026-11-21T03:00:45.800", "turno_id": "C06-r1-cb4103", "tipo": "herramienta", "nombre": "consultar_reserva", "alias": false, "latencia_s": 0.001}
+{"ts": "2026-11-21T03:00:45.889", "turno_id": "C06-r1-cb4103", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:00:51.001", "turno_id": "C06-r1-cb4103", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:00:56.462", "turno_id": "C06-r1-cb4103", "tipo": "llm", "nombre": "llm", "latencia_s": 10.658, "error": "KeyboardInterrupt", "detalle": ""}
+{"ts": "2026-11-21T03:00:58.310", "turno_id": "C06-r1-b159a1", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:00:58.311", "turno_id": "C06-r1-b159a1", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 0.659, "tokens_in": 865, "tokens_out": 139, "decision": "respuesta_final"}
+{"ts": "2026-11-21T03:01:00.442", "turno_id": "C07-r1-723045", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:01:08.780", "turno_id": "C07-r1-723045", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:01:08.781", "turno_id": "C07-r1-723045", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 8.452, "tokens_in": 790, "tokens_out": 161, "decision": "registrar_caso"}
+{"ts": "2026-11-21T03:01:08.792", "turno_id": "C07-r1-723045", "tipo": "herramienta", "nombre": "registrar_caso", "alias": false, "latencia_s": 0.008}
+{"ts": "2026-11-21T03:01:08.943", "turno_id": "C07-r1-723045", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:01:14.897", "turno_id": "C07-r1-723045", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:01:14.898", "turno_id": "C07-r1-723045", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 6.104, "tokens_in": 871, "tokens_out": 260, "decision": "respuesta_final"}
+{"ts": "2026-11-21T03:01:16.998", "turno_id": "C08-r1-1d305b", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:01:19.967", "turno_id": "C08-r1-1d305b", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:01:19.968", "turno_id": "C08-r1-1d305b", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 3.055, "tokens_in": 844, "tokens_out": 134, "decision": "consultar_reserva"}
+{"ts": "2026-11-21T03:01:19.971", "turno_id": "C08-r1-1d305b", "tipo": "herramienta", "nombre": "consultar_reserva", "alias": false, "latencia_s": 0.001}
+{"ts": "2026-11-21T03:01:20.050", "turno_id": "C08-r1-1d305b", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:01:25.554", "turno_id": "C08-r1-1d305b", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:01:25.556", "turno_id": "C08-r1-1d305b", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 5.582, "tokens_in": 938, "tokens_out": 96, "decision": "recordar_historial"}
+{"ts": "2026-11-21T03:01:25.560", "turno_id": "C08-r1-1d305b", "tipo": "herramienta", "nombre": "recordar_historial", "alias": false, "latencia_s": 0.001}
+{"ts": "2026-11-21T03:01:25.632", "turno_id": "C08-r1-1d305b", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:01:33.991", "turno_id": "C08-r1-1d305b", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:01:33.992", "turno_id": "C08-r1-1d305b", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 8.43, "tokens_in": 1009, "tokens_out": 56, "decision": "buscar_politicas"}
+{"ts": "2026-11-21T03:01:34.273", "turno_id": "C08-r1-1d305b", "tipo": "herramienta", "nombre": "buscar_politicas", "alias": false, "latencia_s": 0.278}
+{"ts": "2026-11-21T03:01:34.360", "turno_id": "C08-r1-1d305b", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:01:43.487", "turno_id": "C08-r1-1d305b", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:01:47.047", "turno_id": "C08-r1-1d305b", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:01:47.048", "turno_id": "C08-r1-1d305b", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 12.773, "tokens_in": 1308, "tokens_out": 101, "decision": "evalua_vuelo_adelantado"}
+{"ts": "2026-11-21T03:01:47.052", "turno_id": "C08-r1-1d305b", "tipo": "herramienta", "nombre": "evaluar_vuelo_adelantado", "alias": false, "latencia_s": 0.0}
+{"ts": "2026-11-21T03:01:47.052", "turno_id": "C08-r1-1d305b", "tipo": "herramienta", "nombre": "evaluar_vuelo_adelantado", "alias": true, "latencia_s": 0.001}
+{"ts": "2026-11-21T03:01:47.133", "turno_id": "C08-r1-1d305b", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:01:48.973", "turno_id": "C08-r1-1d305b", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:01:48.974", "turno_id": "C08-r1-1d305b", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 1.92, "tokens_in": 1457, "tokens_out": 81, "decision": "buscar_politicas"}
+{"ts": "2026-11-21T03:01:49.258", "turno_id": "C08-r1-1d305b", "tipo": "herramienta", "nombre": "buscar_politicas", "alias": false, "latencia_s": 0.279}
+{"ts": "2026-11-21T03:01:49.347", "turno_id": "C08-r1-1d305b", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:01:59.446", "turno_id": "C08-r1-1d305b", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:02:01.315", "turno_id": "C08-r1-1d305b", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:02:01.317", "turno_id": "C08-r1-1d305b", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 12.056, "tokens_in": 1709, "tokens_out": 155, "decision": "registrar_caso"}
+{"ts": "2026-11-21T03:02:01.332", "turno_id": "C08-r1-1d305b", "tipo": "herramienta", "nombre": "registrar_caso", "alias": false, "latencia_s": 0.01}
+{"ts": "2026-11-21T03:02:01.428", "turno_id": "C08-r1-1d305b", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:02:12.722", "turno_id": "C08-r1-1d305b", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:02:17.258", "turno_id": "C08-r1-1d305b", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:02:17.259", "turno_id": "C08-r1-1d305b", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 15.924, "tokens_in": 1808, "tokens_out": 586, "decision": "respuesta_final"}
+{"ts": "2026-11-21T03:02:19.660", "turno_id": "C09-r1-5c148f", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:02:26.334", "turno_id": "C09-r1-5c148f", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:02:26.336", "turno_id": "C09-r1-5c148f", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 6.804, "tokens_in": 789, "tokens_out": 117, "decision": "buscar_politicas"}
+{"ts": "2026-11-21T03:02:26.598", "turno_id": "C09-r1-5c148f", "tipo": "herramienta", "nombre": "buscar_politicas", "alias": false, "latencia_s": 0.26}
+{"ts": "2026-11-21T03:02:26.679", "turno_id": "C09-r1-5c148f", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:02:30.184", "turno_id": "C09-r1-5c148f", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:02:30.185", "turno_id": "C09-r1-5c148f", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 3.583, "tokens_in": 1082, "tokens_out": 364, "decision": "respuesta_final"}
+{"ts": "2026-11-21T03:02:32.279", "turno_id": "C10-r1-previa-f2a586", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:02:40.819", "turno_id": "C10-r1-previa-f2a586", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:02:40.820", "turno_id": "C10-r1-previa-f2a586", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 8.621, "tokens_in": 827, "tokens_out": 95, "decision": "consultar_reserva"}
+{"ts": "2026-11-21T03:02:40.823", "turno_id": "C10-r1-previa-f2a586", "tipo": "herramienta", "nombre": "consultar_reserva", "alias": false, "latencia_s": 0.001}
+{"ts": "2026-11-21T03:02:40.909", "turno_id": "C10-r1-previa-f2a586", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:02:46.467", "turno_id": "C10-r1-previa-f2a586", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:02:46.468", "turno_id": "C10-r1-previa-f2a586", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 5.643, "tokens_in": 920, "tokens_out": 93, "decision": "recordar_historial"}
+{"ts": "2026-11-21T03:02:46.472", "turno_id": "C10-r1-previa-f2a586", "tipo": "herramienta", "nombre": "recordar_historial", "alias": false, "latencia_s": 0.001}
+{"ts": "2026-11-21T03:02:46.557", "turno_id": "C10-r1-previa-f2a586", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:02:52.667", "turno_id": "C10-r1-previa-f2a586", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:02:54.278", "turno_id": "C10-r1-previa-f2a586", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:02:54.279", "turno_id": "C10-r1-previa-f2a586", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 7.805, "tokens_in": 992, "tokens_out": 101, "decision": "buscar_politicas"}
+{"ts": "2026-11-21T03:02:54.568", "turno_id": "C10-r1-previa-f2a586", "tipo": "herramienta", "nombre": "buscar_politicas", "alias": false, "latencia_s": 0.287}
+{"ts": "2026-11-21T03:02:54.638", "turno_id": "C10-r1-previa-f2a586", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:03:05.155", "turno_id": "C10-r1-previa-f2a586", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:03:05.156", "turno_id": "C10-r1-previa-f2a586", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 10.585, "tokens_in": 1298, "tokens_out": 58, "decision": "evalua_vuelo_adelantado"}
+{"ts": "2026-11-21T03:03:05.159", "turno_id": "C10-r1-previa-f2a586", "tipo": "herramienta", "nombre": "evaluar_vuelo_adelantado", "alias": false, "latencia_s": 0.0}
+{"ts": "2026-11-21T03:03:05.160", "turno_id": "C10-r1-previa-f2a586", "tipo": "herramienta", "nombre": "evaluar_vuelo_adelantado", "alias": true, "latencia_s": 0.002}
+{"ts": "2026-11-21T03:03:05.249", "turno_id": "C10-r1-previa-f2a586", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:03:14.940", "turno_id": "C10-r1-previa-f2a586", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:03:14.942", "turno_id": "C10-r1-previa-f2a586", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 9.779, "tokens_in": 1447, "tokens_out": 95, "decision": "registrar_caso"}
+{"ts": "2026-11-21T03:03:14.955", "turno_id": "C10-r1-previa-f2a586", "tipo": "herramienta", "nombre": "registrar_caso", "alias": false, "latencia_s": 0.01}
+{"ts": "2026-11-21T03:03:15.047", "turno_id": "C10-r1-previa-f2a586", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:03:28.489", "turno_id": "C10-r1-previa-f2a586", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:03:28.491", "turno_id": "C10-r1-previa-f2a586", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 13.533, "tokens_in": 1544, "tokens_out": 433, "decision": "respuesta_final"}
+{"ts": "2026-11-21T03:03:30.850", "turno_id": "C10-r1-d84159", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:03:32.293", "turno_id": "C10-r1-d84159", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:03:32.295", "turno_id": "C10-r1-d84159", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 1.529, "tokens_in": 821, "tokens_out": 92, "decision": "consultar_reserva"}
+{"ts": "2026-11-21T03:03:32.297", "turno_id": "C10-r1-d84159", "tipo": "herramienta", "nombre": "consultar_reserva", "alias": false, "latencia_s": 0.001}
+{"ts": "2026-11-21T03:03:32.438", "turno_id": "C10-r1-d84159", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:03:39.988", "turno_id": "C10-r1-d84159", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:03:39.990", "turno_id": "C10-r1-d84159", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 7.69, "tokens_in": 914, "tokens_out": 68, "decision": "recordar_historial"}
+{"ts": "2026-11-21T03:03:40.240", "turno_id": "C10-r1-d84159", "tipo": "herramienta", "nombre": "recordar_historial", "alias": false, "latencia_s": 0.248}
+{"ts": "2026-11-21T03:03:40.354", "turno_id": "C10-r1-d84159", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:03:51.185", "turno_id": "C10-r1-d84159", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:03:51.187", "turno_id": "C10-r1-d84159", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 10.943, "tokens_in": 1115, "tokens_out": 131, "decision": "buscar_politicas"}
+{"ts": "2026-11-21T03:03:51.390", "turno_id": "C10-r1-d84159", "tipo": "herramienta", "nombre": "buscar_politicas", "alias": false, "latencia_s": 0.2}
+{"ts": "2026-11-21T03:03:51.479", "turno_id": "C10-r1-d84159", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:03:59.777", "turno_id": "C10-r1-d84159", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:03:59.778", "turno_id": "C10-r1-d84159", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 8.385, "tokens_in": 1408, "tokens_out": 393, "decision": "respuesta_final"}
+{"ts": "2026-11-21T03:04:02.135", "turno_id": "C01-r2-b33a24", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:04:05.749", "turno_id": "C01-r2-b33a24", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:04:05.751", "turno_id": "C01-r2-b33a24", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 3.71, "tokens_in": 797, "tokens_out": 63, "decision": "consultar_reserva"}
+{"ts": "2026-11-21T03:04:05.755", "turno_id": "C01-r2-b33a24", "tipo": "herramienta", "nombre": "consultar_reserva", "alias": false, "latencia_s": 0.001}
+{"ts": "2026-11-21T03:04:05.817", "turno_id": "C01-r2-b33a24", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:04:10.947", "turno_id": "C01-r2-b33a24", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:04:13.404", "turno_id": "C01-r2-b33a24", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:04:13.405", "turno_id": "C01-r2-b33a24", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 7.647, "tokens_in": 891, "tokens_out": 92, "decision": "recordar_historial"}
+{"ts": "2026-11-21T03:04:13.408", "turno_id": "C01-r2-b33a24", "tipo": "herramienta", "nombre": "recordar_historial", "alias": false, "latencia_s": 0.001}
+{"ts": "2026-11-21T03:04:13.488", "turno_id": "C01-r2-b33a24", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:04:18.614", "turno_id": "C01-r2-b33a24", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:04:20.103", "turno_id": "C01-r2-b33a24", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:04:20.105", "turno_id": "C01-r2-b33a24", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 6.694, "tokens_in": 947, "tokens_out": 53, "decision": "buscar_politicas"}
+{"ts": "2026-11-21T03:04:20.367", "turno_id": "C01-r2-b33a24", "tipo": "herramienta", "nombre": "buscar_politicas", "alias": false, "latencia_s": 0.261}
+{"ts": "2026-11-21T03:04:20.481", "turno_id": "C01-r2-b33a24", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:04:24.189", "turno_id": "C01-r2-b33a24", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:04:24.192", "turno_id": "C01-r2-b33a24", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 3.821, "tokens_in": 1143, "tokens_out": 528, "decision": "respuesta_final"}
+{"ts": "2026-11-21T03:04:26.474", "turno_id": "C02-r2-800754", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:04:36.839", "turno_id": "C02-r2-800754", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:04:36.841", "turno_id": "C02-r2-800754", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 10.445, "tokens_in": 792, "tokens_out": 69, "decision": "consultar_reserva"}
+{"ts": "2026-11-21T03:04:36.844", "turno_id": "C02-r2-800754", "tipo": "herramienta", "nombre": "consultar_reserva", "alias": false, "latencia_s": 0.001}
+{"ts": "2026-11-21T03:04:36.953", "turno_id": "C02-r2-800754", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:04:39.616", "turno_id": "C02-r2-800754", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:04:39.618", "turno_id": "C02-r2-800754", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 2.771, "tokens_in": 886, "tokens_out": 96, "decision": "buscar_politicas"}
+{"ts": "2026-11-21T03:04:39.861", "turno_id": "C02-r2-800754", "tipo": "herramienta", "nombre": "buscar_politicas", "alias": false, "latencia_s": 0.241}
+{"ts": "2026-11-21T03:04:39.958", "turno_id": "C02-r2-800754", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:04:45.745", "turno_id": "C02-r2-800754", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:04:45.747", "turno_id": "C02-r2-800754", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 5.883, "tokens_in": 1084, "tokens_out": 710, "decision": "respuesta_final"}
+{"ts": "2026-11-21T03:04:48.215", "turno_id": "C03-r2-cae1b6", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:04:57.853", "turno_id": "C03-r2-cae1b6", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:04:57.854", "turno_id": "C03-r2-cae1b6", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 9.76, "tokens_in": 824, "tokens_out": 132, "decision": "consultar_reserva"}
+{"ts": "2026-11-21T03:04:57.857", "turno_id": "C03-r2-cae1b6", "tipo": "herramienta", "nombre": "consultar_reserva", "alias": false, "latencia_s": 0.001}
+{"ts": "2026-11-21T03:04:57.913", "turno_id": "C03-r2-cae1b6", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:05:04.050", "turno_id": "C03-r2-cae1b6", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:05:06.228", "turno_id": "C03-r2-cae1b6", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:05:06.230", "turno_id": "C03-r2-cae1b6", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 8.37, "tokens_in": 918, "tokens_out": 86, "decision": "recordar_historial"}
+{"ts": "2026-11-21T03:05:06.234", "turno_id": "C03-r2-cae1b6", "tipo": "herramienta", "nombre": "recordar_historial", "alias": false, "latencia_s": 0.001}
+{"ts": "2026-11-21T03:05:06.818", "turno_id": "C03-r2-cae1b6", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:05:06.819", "turno_id": "C03-r2-cae1b6", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 0.583, "tokens_in": 987, "tokens_out": 90, "decision": "buscar_politicas"}
+{"ts": "2026-11-21T03:05:07.085", "turno_id": "C03-r2-cae1b6", "tipo": "herramienta", "nombre": "buscar_politicas", "alias": false, "latencia_s": 0.263}
+{"ts": "2026-11-21T03:05:07.175", "turno_id": "C03-r2-cae1b6", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:05:13.453", "turno_id": "C03-r2-cae1b6", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:05:13.455", "turno_id": "C03-r2-cae1b6", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 6.366, "tokens_in": 1285, "tokens_out": 77, "decision": "evalua_vuelo_adelantado"}
+{"ts": "2026-11-21T03:05:13.458", "turno_id": "C03-r2-cae1b6", "tipo": "herramienta", "nombre": "evaluar_vuelo_adelantado", "alias": false, "latencia_s": 0.0}
+{"ts": "2026-11-21T03:05:13.459", "turno_id": "C03-r2-cae1b6", "tipo": "herramienta", "nombre": "evaluar_vuelo_adelantado", "alias": true, "latencia_s": 0.001}
+{"ts": "2026-11-21T03:05:13.541", "turno_id": "C03-r2-cae1b6", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:05:17.622", "turno_id": "C03-r2-cae1b6", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:05:22.897", "turno_id": "C03-r2-cae1b6", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:05:22.898", "turno_id": "C03-r2-cae1b6", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 9.437, "tokens_in": 1401, "tokens_out": 420, "decision": "respuesta_final"}
+{"ts": "2026-11-21T03:05:25.273", "turno_id": "C04-r2-b27c54", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:05:27.347", "turno_id": "C04-r2-b27c54", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:05:28.828", "turno_id": "C04-r2-b27c54", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:05:28.830", "turno_id": "C04-r2-b27c54", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 3.635, "tokens_in": 824, "tokens_out": 100, "decision": "consultar_reserva"}
+{"ts": "2026-11-21T03:05:28.832", "turno_id": "C04-r2-b27c54", "tipo": "herramienta", "nombre": "consultar_reserva", "alias": false, "latencia_s": 0.001}
+{"ts": "2026-11-21T03:05:28.920", "turno_id": "C04-r2-b27c54", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:05:34.584", "turno_id": "C04-r2-b27c54", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:05:34.586", "turno_id": "C04-r2-b27c54", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 5.751, "tokens_in": 918, "tokens_out": 93, "decision": "recordar_historial"}
+{"ts": "2026-11-21T03:05:34.592", "turno_id": "C04-r2-b27c54", "tipo": "herramienta", "nombre": "recordar_historial", "alias": false, "latencia_s": 0.001}
+{"ts": "2026-11-21T03:05:34.666", "turno_id": "C04-r2-b27c54", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:05:37.371", "turno_id": "C04-r2-b27c54", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:05:37.372", "turno_id": "C04-r2-b27c54", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 2.774, "tokens_in": 987, "tokens_out": 68, "decision": "buscar_politicas"}
+{"ts": "2026-11-21T03:05:37.634", "turno_id": "C04-r2-b27c54", "tipo": "herramienta", "nombre": "buscar_politicas", "alias": false, "latencia_s": 0.259}
+{"ts": "2026-11-21T03:05:37.704", "turno_id": "C04-r2-b27c54", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:05:44.947", "turno_id": "C04-r2-b27c54", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:05:49.563", "turno_id": "C04-r2-b27c54", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:05:49.564", "turno_id": "C04-r2-b27c54", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 11.927, "tokens_in": 1285, "tokens_out": 61, "decision": "evalua_vuelo_adelantado"}
+{"ts": "2026-11-21T03:05:49.567", "turno_id": "C04-r2-b27c54", "tipo": "herramienta", "nombre": "evaluar_vuelo_adelantado", "alias": false, "latencia_s": 0.0}
+{"ts": "2026-11-21T03:05:49.568", "turno_id": "C04-r2-b27c54", "tipo": "herramienta", "nombre": "evaluar_vuelo_adelantado", "alias": true, "latencia_s": 0.002}
+{"ts": "2026-11-21T03:05:49.671", "turno_id": "C04-r2-b27c54", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:05:59.472", "turno_id": "C04-r2-b27c54", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:05:59.473", "turno_id": "C04-r2-b27c54", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 9.903, "tokens_in": 1434, "tokens_out": 147, "decision": "registrar_caso"}
+{"ts": "2026-11-21T03:05:59.484", "turno_id": "C04-r2-b27c54", "tipo": "herramienta", "nombre": "registrar_caso", "alias": false, "latencia_s": 0.008}
+{"ts": "2026-11-21T03:05:59.575", "turno_id": "C04-r2-b27c54", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:06:04.709", "turno_id": "C04-r2-b27c54", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:06:07.616", "turno_id": "C04-r2-b27c54", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:06:07.617", "turno_id": "C04-r2-b27c54", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 8.131, "tokens_in": 1542, "tokens_out": 268, "decision": "respuesta_final"}
+{"ts": "2026-11-21T03:06:10.048", "turno_id": "C05-r2-364bdd", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:06:14.167", "turno_id": "C05-r2-364bdd", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:06:15.628", "turno_id": "C05-r2-364bdd", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:06:15.629", "turno_id": "C05-r2-364bdd", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 5.715, "tokens_in": 827, "tokens_out": 91, "decision": "consultar_reserva"}
+{"ts": "2026-11-21T03:06:15.632", "turno_id": "C05-r2-364bdd", "tipo": "herramienta", "nombre": "consultar_reserva", "alias": false, "latencia_s": 0.001}
+{"ts": "2026-11-21T03:06:15.729", "turno_id": "C05-r2-364bdd", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:06:19.830", "turno_id": "C05-r2-364bdd", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:06:21.316", "turno_id": "C05-r2-364bdd", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:06:21.317", "turno_id": "C05-r2-364bdd", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 5.682, "tokens_in": 920, "tokens_out": 89, "decision": "recordar_historial"}
+{"ts": "2026-11-21T03:06:21.321", "turno_id": "C05-r2-364bdd", "tipo": "herramienta", "nombre": "recordar_historial", "alias": false, "latencia_s": 0.001}
+{"ts": "2026-11-21T03:06:21.423", "turno_id": "C05-r2-364bdd", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:06:27.549", "turno_id": "C05-r2-364bdd", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:06:28.646", "turno_id": "C05-r2-364bdd", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:06:30.231", "turno_id": "C05-r2-364bdd", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:06:30.232", "turno_id": "C05-r2-364bdd", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 8.908, "tokens_in": 992, "tokens_out": 101, "decision": "buscar_politicas"}
+{"ts": "2026-11-21T03:06:30.491", "turno_id": "C05-r2-364bdd", "tipo": "herramienta", "nombre": "buscar_politicas", "alias": false, "latencia_s": 0.257}
+{"ts": "2026-11-21T03:06:30.575", "turno_id": "C05-r2-364bdd", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:06:38.379", "turno_id": "C05-r2-364bdd", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:06:38.381", "turno_id": "C05-r2-364bdd", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 7.887, "tokens_in": 1298, "tokens_out": 58, "decision": "evalua_vuelo_adelantado"}
+{"ts": "2026-11-21T03:06:38.384", "turno_id": "C05-r2-364bdd", "tipo": "herramienta", "nombre": "evaluar_vuelo_adelantado", "alias": false, "latencia_s": 0.0}
+{"ts": "2026-11-21T03:06:38.385", "turno_id": "C05-r2-364bdd", "tipo": "herramienta", "nombre": "evaluar_vuelo_adelantado", "alias": true, "latencia_s": 0.001}
+{"ts": "2026-11-21T03:06:38.466", "turno_id": "C05-r2-364bdd", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:06:44.597", "turno_id": "C05-r2-364bdd", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:06:46.537", "turno_id": "C05-r2-364bdd", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:06:46.538", "turno_id": "C05-r2-364bdd", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 8.151, "tokens_in": 1447, "tokens_out": 144, "decision": "registrar_caso"}
+{"ts": "2026-11-21T03:06:46.549", "turno_id": "C05-r2-364bdd", "tipo": "herramienta", "nombre": "registrar_caso", "alias": false, "latencia_s": 0.008}
+{"ts": "2026-11-21T03:06:46.671", "turno_id": "C05-r2-364bdd", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:06:56.559", "turno_id": "C05-r2-364bdd", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:06:56.560", "turno_id": "C05-r2-364bdd", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 10.009, "tokens_in": 1550, "tokens_out": 268, "decision": "respuesta_final"}
+{"ts": "2026-11-21T03:06:59.478", "turno_id": "C06-r2-5235f2", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:06:59.479", "turno_id": "C06-r2-5235f2", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 0.631, "tokens_in": 796, "tokens_out": 94, "decision": "consultar_reserva"}
+{"ts": "2026-11-21T03:06:59.482", "turno_id": "C06-r2-5235f2", "tipo": "herramienta", "nombre": "consultar_reserva", "alias": false, "latencia_s": 0.001}
+{"ts": "2026-11-21T03:06:59.570", "turno_id": "C06-r2-5235f2", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:07:02.022", "turno_id": "C06-r2-5235f2", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:07:02.023", "turno_id": "C06-r2-5235f2", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 2.539, "tokens_in": 861, "tokens_out": 124, "decision": "respuesta_final"}
+{"ts": "2026-11-21T03:07:04.106", "turno_id": "C07-r2-e2c158", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:07:08.787", "turno_id": "C07-r2-e2c158", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:07:08.789", "turno_id": "C07-r2-e2c158", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 4.75, "tokens_in": 790, "tokens_out": 159, "decision": "registrar_caso"}
+{"ts": "2026-11-21T03:07:08.799", "turno_id": "C07-r2-e2c158", "tipo": "herramienta", "nombre": "registrar_caso", "alias": false, "latencia_s": 0.008}
+{"ts": "2026-11-21T03:07:08.887", "turno_id": "C07-r2-e2c158", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:07:13.974", "turno_id": "C07-r2-e2c158", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:07:13.977", "turno_id": "C07-r2-e2c158", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 5.174, "tokens_in": 871, "tokens_out": 164, "decision": "respuesta_final"}
+{"ts": "2026-11-21T03:07:16.132", "turno_id": "C08-r2-82dbb4", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:07:18.248", "turno_id": "C08-r2-82dbb4", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:07:21.009", "turno_id": "C08-r2-82dbb4", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:07:21.010", "turno_id": "C08-r2-82dbb4", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 5.019, "tokens_in": 844, "tokens_out": 137, "decision": "consultar_reserva"}
+{"ts": "2026-11-21T03:07:21.014", "turno_id": "C08-r2-82dbb4", "tipo": "herramienta", "nombre": "consultar_reserva", "alias": false, "latencia_s": 0.001}
+{"ts": "2026-11-21T03:07:21.212", "turno_id": "C08-r2-82dbb4", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:07:25.290", "turno_id": "C08-r2-82dbb4", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:07:27.024", "turno_id": "C08-r2-82dbb4", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:07:27.051", "turno_id": "C08-r2-82dbb4", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 6.034, "tokens_in": 938, "tokens_out": 70, "decision": "recordar_historial"}
+{"ts": "2026-11-21T03:07:27.054", "turno_id": "C08-r2-82dbb4", "tipo": "herramienta", "nombre": "recordar_historial", "alias": false, "latencia_s": 0.001}
+{"ts": "2026-11-21T03:07:27.635", "turno_id": "C08-r2-82dbb4", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:07:27.636", "turno_id": "C08-r2-82dbb4", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 0.58, "tokens_in": 1009, "tokens_out": 87, "decision": "buscar_politicas"}
+{"ts": "2026-11-21T03:07:27.886", "turno_id": "C08-r2-82dbb4", "tipo": "herramienta", "nombre": "buscar_politicas", "alias": false, "latencia_s": 0.249}
+{"ts": "2026-11-21T03:07:28.036", "turno_id": "C08-r2-82dbb4", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:07:35.168", "turno_id": "C08-r2-82dbb4", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:07:36.575", "turno_id": "C08-r2-82dbb4", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:07:36.576", "turno_id": "C08-r2-82dbb4", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 8.687, "tokens_in": 1305, "tokens_out": 58, "decision": "evalua_vuelo_adelantado"}
+{"ts": "2026-11-21T03:07:36.579", "turno_id": "C08-r2-82dbb4", "tipo": "herramienta", "nombre": "evaluar_vuelo_adelantado", "alias": false, "latencia_s": 0.0}
+{"ts": "2026-11-21T03:07:36.580", "turno_id": "C08-r2-82dbb4", "tipo": "herramienta", "nombre": "evaluar_vuelo_adelantado", "alias": true, "latencia_s": 0.002}
+{"ts": "2026-11-21T03:07:36.693", "turno_id": "C08-r2-82dbb4", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:07:42.172", "turno_id": "C08-r2-82dbb4", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:07:42.173", "turno_id": "C08-r2-82dbb4", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 5.591, "tokens_in": 1454, "tokens_out": 86, "decision": "buscar_politicas"}
+{"ts": "2026-11-21T03:07:42.435", "turno_id": "C08-r2-82dbb4", "tipo": "herramienta", "nombre": "buscar_politicas", "alias": false, "latencia_s": 0.26}
+{"ts": "2026-11-21T03:07:42.511", "turno_id": "C08-r2-82dbb4", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:07:51.148", "turno_id": "C08-r2-82dbb4", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:07:51.150", "turno_id": "C08-r2-82dbb4", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 8.712, "tokens_in": 1703, "tokens_out": 136, "decision": "registrar_caso"}
+{"ts": "2026-11-21T03:07:51.161", "turno_id": "C08-r2-82dbb4", "tipo": "herramienta", "nombre": "registrar_caso", "alias": false, "latencia_s": 0.009}
+{"ts": "2026-11-21T03:07:51.231", "turno_id": "C08-r2-82dbb4", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:07:57.340", "turno_id": "C08-r2-82dbb4", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:08:03.628", "turno_id": "C08-r2-82dbb4", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:08:03.629", "turno_id": "C08-r2-82dbb4", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 12.466, "tokens_in": 1802, "tokens_out": 764, "decision": "respuesta_final"}
+{"ts": "2026-11-21T03:08:06.028", "turno_id": "C09-r2-224719", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:08:09.103", "turno_id": "C09-r2-224719", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:08:10.815", "turno_id": "C09-r2-224719", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:08:10.816", "turno_id": "C09-r2-224719", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 4.889, "tokens_in": 789, "tokens_out": 126, "decision": "buscar_politicas"}
+{"ts": "2026-11-21T03:08:11.065", "turno_id": "C09-r2-224719", "tipo": "herramienta", "nombre": "buscar_politicas", "alias": false, "latencia_s": 0.246}
+{"ts": "2026-11-21T03:08:11.169", "turno_id": "C09-r2-224719", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:08:17.456", "turno_id": "C09-r2-224719", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:08:17.458", "turno_id": "C09-r2-224719", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 6.389, "tokens_in": 1082, "tokens_out": 372, "decision": "respuesta_final"}
+{"ts": "2026-11-21T03:08:19.552", "turno_id": "C10-r2-previa-a45112", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:08:24.036", "turno_id": "C10-r2-previa-a45112", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:08:24.037", "turno_id": "C10-r2-previa-a45112", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 4.566, "tokens_in": 827, "tokens_out": 122, "decision": "consultar_reserva"}
+{"ts": "2026-11-21T03:08:24.040", "turno_id": "C10-r2-previa-a45112", "tipo": "herramienta", "nombre": "consultar_reserva", "alias": false, "latencia_s": 0.001}
+{"ts": "2026-11-21T03:08:24.135", "turno_id": "C10-r2-previa-a45112", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:08:30.264", "turno_id": "C10-r2-previa-a45112", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:08:32.132", "turno_id": "C10-r2-previa-a45112", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:08:32.134", "turno_id": "C10-r2-previa-a45112", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 8.09, "tokens_in": 920, "tokens_out": 90, "decision": "recordar_historial"}
+{"ts": "2026-11-21T03:08:32.137", "turno_id": "C10-r2-previa-a45112", "tipo": "herramienta", "nombre": "recordar_historial", "alias": false, "latencia_s": 0.001}
+{"ts": "2026-11-21T03:08:32.218", "turno_id": "C10-r2-previa-a45112", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:08:35.727", "turno_id": "C10-r2-previa-a45112", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:08:35.728", "turno_id": "C10-r2-previa-a45112", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 3.589, "tokens_in": 992, "tokens_out": 101, "decision": "buscar_politicas"}
+{"ts": "2026-11-21T03:08:36.006", "turno_id": "C10-r2-previa-a45112", "tipo": "herramienta", "nombre": "buscar_politicas", "alias": false, "latencia_s": 0.275}
+{"ts": "2026-11-21T03:08:36.095", "turno_id": "C10-r2-previa-a45112", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:08:44.425", "turno_id": "C10-r2-previa-a45112", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:08:44.426", "turno_id": "C10-r2-previa-a45112", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 8.417, "tokens_in": 1298, "tokens_out": 108, "decision": "evalua_vuelo_adelantado"}
+{"ts": "2026-11-21T03:08:44.430", "turno_id": "C10-r2-previa-a45112", "tipo": "herramienta", "nombre": "evaluar_vuelo_adelantado", "alias": false, "latencia_s": 0.0}
+{"ts": "2026-11-21T03:08:44.430", "turno_id": "C10-r2-previa-a45112", "tipo": "herramienta", "nombre": "evaluar_vuelo_adelantado", "alias": true, "latencia_s": 0.001}
+{"ts": "2026-11-21T03:08:44.513", "turno_id": "C10-r2-previa-a45112", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:08:48.055", "turno_id": "C10-r2-previa-a45112", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:08:48.059", "turno_id": "C10-r2-previa-a45112", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 3.627, "tokens_in": 1458, "tokens_out": 139, "decision": "registrar_caso"}
+{"ts": "2026-11-21T03:08:48.071", "turno_id": "C10-r2-previa-a45112", "tipo": "herramienta", "nombre": "registrar_caso", "alias": false, "latencia_s": 0.01}
+{"ts": "2026-11-21T03:08:48.219", "turno_id": "C10-r2-previa-a45112", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:09:05.022", "turno_id": "C10-r2-previa-a45112", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:09:05.024", "turno_id": "C10-r2-previa-a45112", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 16.95, "tokens_in": 1567, "tokens_out": 539, "decision": "respuesta_final"}
+{"ts": "2026-11-21T03:09:07.369", "turno_id": "C10-r2-87e31d", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:09:08.742", "turno_id": "C10-r2-87e31d", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:09:08.743", "turno_id": "C10-r2-87e31d", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 1.435, "tokens_in": 821, "tokens_out": 94, "decision": "consultar_reserva"}
+{"ts": "2026-11-21T03:09:08.747", "turno_id": "C10-r2-87e31d", "tipo": "herramienta", "nombre": "consultar_reserva", "alias": false, "latencia_s": 0.001}
+{"ts": "2026-11-21T03:09:08.812", "turno_id": "C10-r2-87e31d", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:09:15.309", "turno_id": "C10-r2-87e31d", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:09:15.310", "turno_id": "C10-r2-87e31d", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 6.561, "tokens_in": 914, "tokens_out": 67, "decision": "recordar_historial"}
+{"ts": "2026-11-21T03:09:15.562", "turno_id": "C10-r2-87e31d", "tipo": "herramienta", "nombre": "recordar_historial", "alias": false, "latencia_s": 0.249}
+{"ts": "2026-11-21T03:09:15.651", "turno_id": "C10-r2-87e31d", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:09:17.805", "turno_id": "C10-r2-87e31d", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:09:19.249", "turno_id": "C10-r2-87e31d", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:09:19.251", "turno_id": "C10-r2-87e31d", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 3.686, "tokens_in": 1115, "tokens_out": 98, "decision": "buscar_politicas"}
+{"ts": "2026-11-21T03:09:19.432", "turno_id": "C10-r2-87e31d", "tipo": "herramienta", "nombre": "buscar_politicas", "alias": false, "latencia_s": 0.179}
+{"ts": "2026-11-21T03:09:19.505", "turno_id": "C10-r2-87e31d", "tipo": "http", "nombre": "api.groq.com", "estado": 429}
+{"ts": "2026-11-21T03:09:29.474", "turno_id": "C10-r2-87e31d", "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:09:29.476", "turno_id": "C10-r2-87e31d", "tipo": "llm", "nombre": "openai/gpt-oss-120b", "latencia_s": 10.042, "tokens_in": 1414, "tokens_out": 464, "decision": "respuesta_final"}
+{"ts": "2026-11-21T03:30:00.884", "turno_id": null, "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:32:49.367", "turno_id": null, "tipo": "http", "nombre": "api.groq.com", "estado": 200}
+{"ts": "2026-11-21T03:32:49.367", "turno_id": null, "tipo": "http", "nombre": "api.groq.com", "estado": 200}
