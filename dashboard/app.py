@@ -296,8 +296,11 @@ with tab_err:
                          title="Requests HTTP por código de estado")
             sin_titulo_leyenda(fig)
             fig.update_traces(marker_line_color="white", marker_line_width=1.5)
+            # Leyenda arriba a la derecha (bajo el título) para que no tape el eje X
             fig.update_layout(height=300, yaxis=dict(gridcolor="rgba(0,0,0,0)"),
-                              xaxis=dict(showgrid=True, gridcolor="#eef1f4"))
+                              xaxis=dict(showgrid=True, gridcolor="#eef1f4"),
+                              legend=dict(orientation="h", yanchor="bottom", y=1.0, xanchor="right", x=1),
+                              margin=dict(t=64))
             st.plotly_chart(fig, use_container_width=True, config=CFG)
         else:
             st.caption("Sin requests HTTP registrados.")
